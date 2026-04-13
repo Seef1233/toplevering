@@ -373,17 +373,17 @@ if (contactForm) {
 
     // Name
     if (!nameInput.value.trim() || nameInput.value.trim().length < 3) {
-      showError('name', 'الرجاء إدخال الاسم الكامل (3 أحرف على الأقل)');
+      showError('name', 'Voer alstublieft uw volledige naam in (minimaal 3 tekens)');
       valid = false;
     } else {
       clearError('name');
     }
 
     // Phone
-    const phoneVal = phoneInput.value.trim().replace(/\s/g, '');
-    const phoneRegex = /^(05|5)[0-9]{8}$/;
+    const phoneVal = phoneInput.value.trim().replace(/\s/g, '').replace(/^(\+31|0)/, '');
+    const phoneRegex = /^[6-9][0-9]{8}$/;
     if (!phoneRegex.test(phoneVal)) {
-      showError('phone', 'الرجاء إدخال رقم جوال سعودي صحيح (مثال: 0512345678)');
+      showError('phone', 'Voer alstublieft een geldig Nederlands telefoonnummer in (bijvoorbeeld: 06 12 34 56 78)');
       valid = false;
     } else {
       clearError('phone');
@@ -391,7 +391,7 @@ if (contactForm) {
 
     // Service
     if (!serviceSelect.value) {
-      showError('service', 'الرجاء اختيار نوع الخدمة');
+      showError('service', 'Selecteer alstublieft een dienst');
       valid = false;
     } else {
       clearError('service');
@@ -406,8 +406,8 @@ if (contactForm) {
   });
 
   phoneInput.addEventListener('input', () => {
-    const val = phoneInput.value.trim().replace(/\s/g, '');
-    if (/^(05|5)[0-9]{8}$/.test(val)) clearError('phone');
+    const val = phoneInput.value.trim().replace(/\s/g, '').replace(/^(\+31|0)/, '');
+    if (/^[6-9][0-9]{8}$/.test(val)) clearError('phone');
   });
 
   serviceSelect.addEventListener('change', () => {
@@ -419,27 +419,51 @@ if (contactForm) {
 
     if (!validateForm()) return;
 
-    // Simulate sending
+    // Show loading state
     submitBtn.disabled = true;
-    submitBtn.querySelector('span').textContent = 'جاري الإرسال...';
+    submitBtn.querySelector('span').textContent = 'Verzenden...';
     submitBtn.querySelector('i').className = 'fas fa-spinner fa-spin';
 
-    await new Promise(resolve => setTimeout(resolve, 1800));
+    try {
+      // Send form data via Formspree
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      });
 
-    // Show success
-    contactForm.hidden = true;
-    formSuccess.hidden = false;
-    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (response.ok) {
+        // Show success
+        contactForm.hidden = true;
+        formSuccess.hidden = false;
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // Reset after 5 seconds (optional)
-    setTimeout(() => {
-      contactForm.reset();
-      contactForm.hidden = false;
-      formSuccess.hidden = true;
+        // Reset after 5 seconds
+        setTimeout(() => {
+          contactForm.reset();
+          contactForm.hidden = false;
+          formSuccess.hidden = true;
+          submitBtn.disabled = false;
+          submitBtn.querySelector('span').textContent = 'Gratis Offerte Aanvragen';
+          submitBtn.querySelector('i').className = 'fas fa-paper-plane';
+        }, 6000);
+      } else {
+        // Show error message
+        alert('Er is een fout opgetreden bij het verzenden. Probeer het later opnieuw.');
+        submitBtn.disabled = false;
+        submitBtn.querySelector('span').textContent = 'Gratis Offerte Aanvragen';
+        submitBtn.querySelector('i').className = 'fas fa-paper-plane';
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Verbindingsfout. Controleer uw internetverbinding en probeer opnieuw.');
       submitBtn.disabled = false;
-      submitBtn.querySelector('span').textContent = 'إرسال طلب الحجز';
+      submitBtn.querySelector('span').textContent = 'Gratis Offerte Aanvragen';
       submitBtn.querySelector('i').className = 'fas fa-paper-plane';
-    }, 6000);
+    }
   });
 }
 
