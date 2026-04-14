@@ -1629,6 +1629,17 @@ input, textarea, select {
   appearance: none;
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.flatpickr-input::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+.flatpickr-input {
+  cursor: pointer;
+}
+
 .form-group select {
   padding-right: 44px;
   cursor: pointer;
