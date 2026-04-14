@@ -86,6 +86,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const scrollTopBtn = document.getElementById('scrollTop');
 
 function handleScrollTop() {
+  if (window.innerWidth <= 768) {
+    scrollTopBtn.hidden = true;
+    scrollTopBtn.classList.remove('visible');
+    return;
+  }
   if (window.scrollY > 400) {
     scrollTopBtn.classList.add('visible');
     scrollTopBtn.hidden = false;

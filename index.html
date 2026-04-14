@@ -891,7 +891,7 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer" role="contentinfo" aria-label="Paginavoettekst">
+  <footer class="footer" id="main-footer" role="contentinfo" aria-label="Paginavoettekst">
     <div class="footer-top">
       <div class="container">
         <div class="footer-grid">
@@ -1143,6 +1143,26 @@
   var style=document.createElement('style');
   style.textContent='input.err{border-color:#e53e3e!important;box-shadow:0 0 0 2px rgba(229,62,62,.2)!important;}';
   document.head.appendChild(style);
+
+  // Hide floating WhatsApp when footer is visible
+  var floatWA = document.querySelector('.float-whatsapp');
+  var footer  = document.getElementById('main-footer');
+  if(floatWA && footer && 'IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if(entry.isIntersecting) {
+          floatWA.style.opacity = '0';
+          floatWA.style.pointerEvents = 'none';
+          floatWA.style.transform = 'scale(0.8)';
+        } else {
+          floatWA.style.opacity = '1';
+          floatWA.style.pointerEvents = 'auto';
+          floatWA.style.transform = 'scale(1)';
+        }
+      });
+    }, { threshold: 0.1 });
+    obs.observe(footer);
+  }
   </script>
 </body>
 </html>
