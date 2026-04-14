@@ -1751,73 +1751,69 @@ input, textarea, select {
 
 .footer-social {
   display: flex;
-  gap: 15px;
+  gap: 12px;
+  margin-top: 20px;
+  padding-left: 0;
 }
 
 .footer-social a {
-  width: 48px;
-  height: 48px;
-  background: rgba(255,255,255,0.07);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
-  font-size: 1.1rem;
+  color: #fff;
   transition: var(--transition);
-  border: 2px solid rgba(255,255,255,0.15);
+  border: none;
+  flex-shrink: 0;
 }
 
 .footer-social a:hover {
-  color: var(--white);
-  transform: translateY(-4px) scale(1.1);
+  transform: translateY(-4px) scale(1.08);
 }
 
 /* Facebook */
 .footer-social a[href*="facebook"] {
   background: #1877f2;
-  border-color: #1877f2;
+  box-shadow: 0 4px 12px rgba(24,119,242,0.3);
 }
 .footer-social a[href*="facebook"]:hover {
   box-shadow: 0 8px 20px rgba(24,119,242,0.5);
-  transform: translateY(-4px) scale(1.1);
 }
 
 /* Instagram */
 .footer-social a[href*="instagram"] {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  border-color: #dc2743;
+  box-shadow: 0 4px 12px rgba(220,39,67,0.3);
 }
 .footer-social a[href*="instagram"]:hover {
   box-shadow: 0 8px 20px rgba(220,39,67,0.5);
-  transform: translateY(-4px) scale(1.1);
 }
 
 /* WhatsApp */
 .footer-social a[href*="wa.me"],
 .footer-social a[href*="whatsapp"] {
   background: #25d366;
-  border-color: #25d366;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.3);
 }
 .footer-social a[href*="wa.me"]:hover,
 .footer-social a[href*="whatsapp"]:hover {
   box-shadow: 0 8px 20px rgba(37,211,102,0.5);
-  transform: translateY(-4px) scale(1.1);
 }
 
 /* Gmail */
 .footer-social a.gmail-icon {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #ea4335;
+  box-shadow: 0 4px 12px rgba(234,67,53,0.3);
 }
-.footer-social a.gmail-icon .gmail-path-1 { fill: #4caf50 !important; }
-.footer-social a.gmail-icon .gmail-path-2 { fill: #1e88e5 !important; }
-.footer-social a.gmail-icon .gmail-path-3 { fill: #e53935 !important; }
-.footer-social a.gmail-icon .gmail-path-4 { fill: #c62828 !important; }
-.footer-social a.gmail-icon .gmail-path-5 { fill: #fbc02d !important; }
+.footer-social a.gmail-icon .gmail-path-1,
+.footer-social a.gmail-icon .gmail-path-2,
+.footer-social a.gmail-icon .gmail-path-3,
+.footer-social a.gmail-icon .gmail-path-4,
+.footer-social a.gmail-icon .gmail-path-5 { fill: #fff !important; }
 .footer-social a.gmail-icon:hover {
-  box-shadow: 0 8px 20px rgba(229,57,53,0.4);
-  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(234,67,53,0.5);
 }
 
 .footer-nav h3,
