@@ -327,6 +327,10 @@ input, textarea, select {
   flex-shrink: 0;
 }
 
+.logo img {
+  mix-blend-mode: screen;
+}
+
 .logo-icon {
   width: 44px;
   height: 44px;
@@ -457,7 +461,7 @@ input, textarea, select {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #1a1a1a);
+  background: #0a0a0a;
 }
 
 .hero-bg {
@@ -468,11 +472,11 @@ input, textarea, select {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-    rgba(26,26,26,0.85) 0%,
-    rgba(26,26,26,0.90) 60%,
-    rgba(42,42,42,0.85) 100%
-  );
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(212,175,55,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(212,175,55,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 80% at 50% 100%, rgba(212,175,55,0.05) 0%, transparent 50%),
+    linear-gradient(160deg, #0f0f0f 0%, #141414 50%, #0a0a0a 100%);
 }
 
 .hero-shapes {
@@ -484,32 +488,32 @@ input, textarea, select {
 .shape {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.07;
-  background: var(--white);
+  background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+  will-change: transform;
 }
 
 .shape-1 {
-  width: 600px;
-  height: 600px;
-  top: -200px;
-  left: -200px;
-  animation: float 8s ease-in-out infinite;
+  width: 700px;
+  height: 700px;
+  top: -250px;
+  left: -150px;
+  animation: float 10s ease-in-out infinite;
 }
 
 .shape-2 {
-  width: 400px;
-  height: 400px;
-  bottom: -100px;
-  right: 20%;
-  animation: float 6s ease-in-out infinite reverse;
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: 15%;
+  animation: float 8s ease-in-out infinite reverse;
 }
 
 .shape-3 {
-  width: 200px;
-  height: 200px;
-  top: 30%;
-  right: 10%;
-  animation: float 10s ease-in-out infinite;
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  right: 5%;
+  animation: float 12s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -2396,6 +2400,207 @@ input, textarea, select {
   justify-content: center;
   font-size: 0.65rem !important;
   flex-shrink: 0;
+}
+
+/* ===== EXTRA ADDON CHECKBOX ===== */
+.extra-addon {
+  display: block;
+  cursor: pointer;
+  border: 2px solid rgba(212,175,55,0.25);
+  border-radius: 12px;
+  padding: 0;
+  transition: border-color 0.2s, background 0.2s;
+  overflow: hidden;
+}
+
+.extra-addon:hover {
+  border-color: rgba(212,175,55,0.6);
+}
+
+.extra-addon input[type="checkbox"] {
+  display: none;
+}
+
+.extra-addon-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.03);
+  transition: background 0.2s;
+}
+
+.extra-addon:has(input:checked) {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212,175,55,0.35), 0 4px 20px rgba(212,175,55,0.15);
+}
+
+.extra-addon:has(input:checked) .extra-addon-content {
+  background: rgba(212,175,55,0.1);
+}
+
+.extra-addon:has(input:checked) .extra-addon-badge {
+  background: #d4af37;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.extra-addon:has(input:checked) .extra-addon-content strong {
+  color: #d4af37;
+}
+
+.extra-addon-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid rgba(212,175,55,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+  color: transparent;
+  font-size: 0.75rem;
+}
+
+.extra-addon:has(input:checked) .extra-addon-check {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #1a1a1a;
+  transform: scale(1.1);
+}
+
+.extra-addon-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.extra-addon-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.extra-addon-content strong {
+  color: #e0e0e0;
+  font-size: 0.92rem;
+}
+
+.extra-addon-content span {
+  color: #888;
+  font-size: 0.78rem;
+}
+
+.extra-addon-badge {
+  background: rgba(212,175,55,0.15);
+  color: #d4af37;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ===== FLATPICKR CUSTOM THEME ===== */
+.flatpickr-calendar {
+  background: #1e1e1e !important;
+  border: 1px solid rgba(212,175,55,0.3) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5) !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.flatpickr-months {
+  background: #181818 !important;
+  border-radius: 12px 12px 0 0 !important;
+  padding: 6px 0 !important;
+}
+
+.flatpickr-month {
+  color: #d4af37 !important;
+  fill: #d4af37 !important;
+}
+
+.flatpickr-current-month span.cur-month,
+.flatpickr-current-month input.cur-year {
+  color: #d4af37 !important;
+  font-weight: 700 !important;
+}
+
+.flatpickr-prev-month, .flatpickr-next-month {
+  color: #d4af37 !important;
+  fill: #d4af37 !important;
+}
+
+.flatpickr-prev-month:hover, .flatpickr-next-month:hover {
+  color: #f5d76e !important;
+  fill: #f5d76e !important;
+}
+
+.flatpickr-weekdays {
+  background: #181818 !important;
+}
+
+span.flatpickr-weekday {
+  color: #d4af37 !important;
+  font-weight: 600 !important;
+  font-size: 0.78rem !important;
+}
+
+.flatpickr-day {
+  color: #e0e0e0 !important;
+  border-radius: 8px !important;
+}
+
+.flatpickr-day:hover {
+  background: rgba(212,175,55,0.15) !important;
+  border-color: rgba(212,175,55,0.3) !important;
+  color: #d4af37 !important;
+}
+
+.flatpickr-day.selected {
+  background: #d4af37 !important;
+  border-color: #d4af37 !important;
+  color: #1a1a1a !important;
+  font-weight: 700 !important;
+}
+
+.flatpickr-day.selected:hover {
+  background: #c9a030 !important;
+}
+
+.flatpickr-day.today {
+  border-color: rgba(212,175,55,0.5) !important;
+  color: #d4af37 !important;
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  color: #444 !important;
+}
+
+.numInputWrapper:hover {
+  background: transparent !important;
+}
+
+.numInputWrapper span {
+  border-color: rgba(212,175,55,0.2) !important;
+}
+
+.numInputWrapper span svg path {
+  fill: #d4af37 !important;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .shape-1, .shape-2, .shape-3,
+  .hero-card, .hero-scroll a,
+  .main-icon, .circle-ring {
+    animation: none !important;
+  }
 }
 
 /* ===== PRINT STYLES ===== */
