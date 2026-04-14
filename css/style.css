@@ -2420,6 +2420,33 @@ input, textarea, select {
   .scroll-top {
     display: none !important;
   }
+
+  /* Custom select mobile fixes */
+  .custom-select-menu {
+    max-height: 260px;
+    border-radius: 14px;
+    padding: 6px;
+  }
+
+  .custom-select-option {
+    padding: 9px 10px;
+    gap: 8px;
+    font-size: 0.88rem;
+    border-radius: 10px;
+  }
+
+  .custom-select-option svg {
+    width: 22px;
+    height: 22px;
+    padding: 4px;
+    flex-shrink: 0;
+  }
+
+  .custom-select-trigger {
+    min-height: 46px;
+    padding: 10px 13px;
+    font-size: 0.92rem;
+  }
 }
 
 /* ===== MATERIAL SYMBOLS SIZING ===== */
