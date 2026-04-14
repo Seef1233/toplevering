@@ -2594,6 +2594,56 @@ span.flatpickr-weekday {
   fill: #d4af37 !important;
 }
 
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+  /* WhatsApp & scroll-top → right side */
+  .float-whatsapp {
+    left: auto;
+    right: 20px;
+    bottom: 20px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .scroll-top {
+    left: auto;
+    right: 20px;
+    bottom: 84px;
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Footer padding */
+  .footer-top .container,
+  .footer-bottom .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-grid {
+    padding: 0 4px;
+  }
+
+  /* Social icons at bottom of footer on mobile */
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-social {
+    order: 10;
+    margin-top: 16px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom p {
+    padding: 0 12px;
+    line-height: 1.8;
+  }
+}
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   .shape-1, .shape-2, .shape-3,
