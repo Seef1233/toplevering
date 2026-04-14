@@ -781,32 +781,39 @@
           </div>
 
           <div class="contact-form-wrapper">
-            <form class="contact-form" id="contactForm" action="https://formspree.io/xinfotopaflevering.nl" method="POST" novalidate aria-label="Offerte aanvraagformulier">
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate aria-label="Offerte aanvraagformulier">
+              <input type="hidden" name="access_key" value="9b306565-145c-42b4-abbf-cf50a20816c8" />
+              <input type="hidden" id="svc-hidden" name="dienst" value="" />
+
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Naam <span class="required" aria-label="verplicht">*</span></label>
-                  <input type="text" id="name" name="name" placeholder="Jan de Vries"
+                  <label for="cf-naam">Naam <span class="required" aria-label="verplicht">*</span></label>
+                  <input type="text" id="cf-naam" name="naam" placeholder="Jan de Vries"
                     required minlength="2" autocomplete="name" aria-required="true" />
-                  <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
                 </div>
                 <div class="form-group">
-                  <label for="phone">Telefoon <span class="required" aria-label="verplicht">*</span></label>
-                  <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78"
+                  <label for="cf-tel">Telefoon <span class="required" aria-label="verplicht">*</span></label>
+                  <input type="tel" id="cf-tel" name="telefoon" placeholder="06 12 34 56 78"
                     required autocomplete="tel" aria-required="true" />
-                  <span class="form-error" id="phone-error" role="alert" aria-live="polite"></span>
                 </div>
-              </div>
-
-              <div class="form-group">
-                <label for="email">E-mailadres <span class="required" aria-label="verplicht">*</span></label>
-                <input type="email" id="email" name="email" placeholder="jan@email.nl"
-                  required autocomplete="email" aria-required="true" />
               </div>
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="service">Type schoonmaak <span class="required" aria-label="verplicht">*</span></label>
-                  <select id="service" name="service" required aria-required="true">
+                  <label for="cf-email">E-mailadres <span class="required" aria-label="verplicht">*</span></label>
+                  <input type="email" id="cf-email" name="email" placeholder="jan@email.nl"
+                    required autocomplete="email" aria-required="true" />
+                </div>
+                <div class="form-group">
+                  <label for="cf-bedrijf">Bedrijfsnaam</label>
+                  <input type="text" id="cf-bedrijf" name="bedrijf" placeholder="Optioneel" autocomplete="organization" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="service">Type schoonmaak</label>
+                  <select id="service" name="service_type" aria-required="true">
                     <option value="" disabled selected>Kies een dienst</option>
                     <option value="kantoor">🏢 Kantoor / Bedrijf (v.a. €35/u)</option>
                     <option value="eindschoonmaak">🔑 Eindschoonmaak</option>
@@ -815,18 +822,17 @@
                     <option value="zakelijk">💼 Contract zakelijk</option>
                     <option value="other">Overig</option>
                   </select>
-                  <span class="form-error" id="service-error" role="alert" aria-live="polite"></span>
                 </div>
                 <div class="form-group">
                   <label for="date">Gewenste datum</label>
-                  <input type="text" id="date" name="date" placeholder="Kies een datum..." aria-label="Kies een datum voor de schoonmaak" readonly />
+                  <input type="text" id="date" name="datum" placeholder="Kies een datum..." aria-label="Kies een datum voor de schoonmaak" readonly />
                 </div>
               </div>
 
               <div class="form-group">
                 <label>Extra dienst</label>
                 <label class="extra-addon" for="ramen">
-                  <input type="checkbox" id="ramen" name="extra" value="raamreiniging" />
+                  <input type="checkbox" id="ramen" name="extra" value="Raam- & Vensterreiniging (binnen & buiten)" />
                   <div class="extra-addon-content">
                     <div class="extra-addon-check" id="ramenCheck">✓</div>
                     <div class="extra-addon-icon">🪟</div>
@@ -840,14 +846,20 @@
               </div>
 
               <div class="form-group">
-                <label for="message">Extra informatie</label>
-                <textarea id="message" name="message" rows="4"
-                  placeholder="Bijv. gewenste datum, adres, oppervlakte, aantal kamers..."></textarea>
+                <label for="form-fotos">Foto's toevoegen</label>
+                <input type="file" id="form-fotos" name="fotos" accept="image/*" multiple
+                  style="padding:10px;cursor:pointer;" />
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block" id="submitBtn" aria-label="Gratis offerte aanvragen">
-                <span class="ms">send</span>
-                <span>Gratis Offerte Aanvragen</span>
+              <div class="form-group">
+                <label for="cf-msg">Extra informatie</label>
+                <textarea id="cf-msg" name="bericht" rows="4"
+                  placeholder="Bijv. adres, oppervlakte, bijzonderheden..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn" aria-label="Gratis offerte aanvragen">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                <span>Gratis offerte aanvragen →</span>
               </button>
 
               <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:.8rem;flex-wrap:wrap">
@@ -856,9 +868,9 @@
                 <span style="font-size:.78rem;color:#888">⚡ Reactie binnen 24 uur</span>
               </div>
 
-              <div class="form-success" id="formSuccess" role="alert" aria-live="assertive" hidden>
-                <span class="ms">check_circle</span>
-                <p>Uw aanvraag is succesvol verzonden! Wij nemen binnen 24 uur contact met u op.</p>
+              <div id="form-success" role="alert" aria-live="assertive" style="display:none;text-align:center;padding:2rem;color:#d4af37;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="#d4af37" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <p style="margin-top:1rem;font-weight:600;">Uw aanvraag is succesvol verzonden!<br><span style="color:#ccc;font-weight:400;font-size:.9rem;">Wij nemen binnen 24 uur contact met u op.</span></p>
               </div>
             </form>
           </div>
@@ -982,5 +994,121 @@
 
   <!-- JavaScript -->
   <script src="js/script.js" defer></script>
+
+  <script>
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var naam=document.getElementById('cf-naam');
+    var tel=document.getElementById('cf-tel');
+    var email=document.getElementById('cf-email');
+    var ok=true;
+    [naam,tel,email].forEach(function(f){
+      if(f&&!f.value.trim()){f.classList.add('err');ok=false;}
+      else if(f){f.classList.remove('err');}
+    });
+    if(!ok){naam&&naam.scrollIntoView({behavior:'smooth',block:'center'});return;}
+    var btn=document.getElementById('submit-btn');
+    btn.disabled=true;btn.querySelector('span').textContent='Versturen...';
+
+    // sync service dropdown to hidden field
+    var svc=document.getElementById('service');
+    if(svc) document.getElementById('svc-hidden').value=svc.options[svc.selectedIndex]?svc.options[svc.selectedIndex].text:'';
+
+    var formData=new FormData();
+    formData.append('access_key','9b306565-145c-42b4-abbf-cf50a20816c8');
+    formData.append('subject','Nieuwe offerte aanvraag — topaflevering.nl');
+    formData.append('from_name','Top Aflevering Website');
+    formData.append('naam',document.getElementById('cf-naam').value);
+    formData.append('telefoon',document.getElementById('cf-tel').value);
+    formData.append('email',document.getElementById('cf-email').value);
+    formData.append('bedrijf',document.getElementById('cf-bedrijf').value||'');
+    formData.append('bericht',document.getElementById('cf-msg').value||'');
+    formData.append('dienst',document.getElementById('svc-hidden').value||'');
+    var dateEl=document.getElementById('date');
+    if(dateEl) formData.append('datum',dateEl.value||'');
+    var ramenEl=document.getElementById('ramen');
+    if(ramenEl&&ramenEl.checked) formData.append('extra','Raam- & Vensterreiniging (binnen & buiten)');
+
+    var fileInput=document.getElementById('form-fotos');
+    if(fileInput&&fileInput.files&&fileInput.files.length){
+      var tooBig=Array.from(fileInput.files).some(function(file){return file.size>10*1024*1024;});
+      if(tooBig){
+        alert('Afbeeldingen groter dan 10MB zijn niet toegestaan.');
+        btn.disabled=false;btn.querySelector('span').textContent='Gratis offerte aanvragen →';
+        return;
+      }
+      Array.from(fileInput.files).forEach(function(file){formData.append('fotos',file);});
+    }
+
+    var clientNaam  = document.getElementById('cf-naam').value;
+    var clientEmail = document.getElementById('cf-email').value;
+    var clientTel   = document.getElementById('cf-tel').value;
+    var clientBedrijf = document.getElementById('cf-bedrijf').value||'';
+    var clientMsg   = document.getElementById('cf-msg').value||'';
+    var clientDienst = document.getElementById('svc-hidden').value||'';
+    var clientDatum  = (document.getElementById('date')||{}).value||'';
+    var clientRamen  = (document.getElementById('ramen')||{}).checked ? 'Ja' : 'Nee';
+
+    var bevestigingTekst =
+      'Beste ' + clientNaam + ',\n\n' +
+      'Hartelijk dank voor uw aanvraag bij Top Aflevering!\n\n' +
+      'Wij hebben uw aanvraag in goede orde ontvangen en nemen binnen 24 uur contact met u op.\n\n' +
+      '───────────────────────────\n' +
+      'UW AANVRAAGDETAILS\n' +
+      '───────────────────────────\n' +
+      '• Naam:      ' + clientNaam + '\n' +
+      '• Telefoon:  ' + clientTel + '\n' +
+      '• E-mail:    ' + clientEmail + '\n' +
+      (clientBedrijf ? '• Bedrijf:   ' + clientBedrijf + '\n' : '') +
+      (clientDienst  ? '• Dienst:    ' + clientDienst  + '\n' : '') +
+      (clientDatum   ? '• Datum:     ' + clientDatum   + '\n' : '') +
+      '• Raamreiniging: ' + clientRamen + '\n' +
+      (clientMsg     ? '• Opmerking: ' + clientMsg     + '\n' : '') +
+      '───────────────────────────\n\n' +
+      'Wij kijken ernaar uit u te mogen bedienen!\n\n' +
+      'Met vriendelijke groet,\n' +
+      'Top Aflevering\n' +
+      '📞 06 13 28 80 23\n' +
+      '✉️ info@topaflevering.nl\n' +
+      '🌐 topaflevering.nl';
+
+    // Bevestigingsmail naar klant
+    var confirmData = new FormData();
+    confirmData.append('access_key','9b306565-145c-42b4-abbf-cf50a20816c8');
+    confirmData.append('subject','✅ Bevestiging aanvraag — Top Aflevering');
+    confirmData.append('from_name','Top Aflevering');
+    confirmData.append('cc', clientEmail);
+    confirmData.append('naam', clientNaam);
+    confirmData.append('bericht', bevestigingTekst);
+
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:formData})
+      .then(function(r){return r.json();})
+      .then(function(){
+        return fetch('https://api.web3forms.com/submit',{method:'POST',body:confirmData});
+      })
+      .then(function(){
+        document.getElementById('form-success').style.display='block';
+        document.getElementById('contactForm').style.display='none';
+      })
+      .catch(function(){
+        document.getElementById('form-success').style.display='block';
+        document.getElementById('contactForm').style.display='none';
+      });
+  });
+
+  // Badge update for ramen checkbox
+  var ramenCb=document.getElementById('ramen');
+  var ramenBadge=document.getElementById('ramenBadge');
+  if(ramenCb&&ramenBadge){
+    ramenCb.addEventListener('change',function(){
+      ramenBadge.textContent=this.checked?'✓ Toegevoegd':'+ Op aanvraag';
+    });
+  }
+
+  // err style
+  var style=document.createElement('style');
+  style.textContent='input.err{border-color:#e53e3e!important;box-shadow:0 0 0 2px rgba(229,62,62,.2)!important;}';
+  document.head.appendChild(style);
+  </script>
 </body>
 </html>
