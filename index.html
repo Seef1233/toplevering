@@ -846,9 +846,15 @@
               </div>
 
               <div class="form-group">
-                <label for="form-fotos">Foto's toevoegen</label>
-                <input type="file" id="form-fotos" name="fotos" accept="image/*" multiple
-                  style="padding:10px;cursor:pointer;" />
+                <label>Foto's toevoegen</label>
+                <label class="file-upload-area" for="form-fotos" id="fileLabel">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="color:#d4af37;flex-shrink:0"><path d="M19.35 10.04A7.49 7.49 0 0012 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 000 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                  <div>
+                    <strong id="fileText">Klik om foto's te uploaden</strong>
+                    <span>JPG, PNG, WEBP — max 10MB per foto</span>
+                  </div>
+                  <input type="file" id="form-fotos" name="fotos" accept="image/*" multiple style="display:none;" />
+                </label>
               </div>
 
               <div class="form-group">
@@ -868,11 +874,15 @@
                 <span style="font-size:.78rem;color:#888">⚡ Reactie binnen 24 uur</span>
               </div>
 
-              <div id="form-success" role="alert" aria-live="assertive" style="display:none;text-align:center;padding:2rem;color:#d4af37;">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="#d4af37" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <p style="margin-top:1rem;font-weight:600;">Uw aanvraag is succesvol verzonden!<br><span style="color:#ccc;font-weight:400;font-size:.9rem;">Wij nemen binnen 24 uur contact met u op.</span></p>
-              </div>
             </form>
+
+            <div id="form-success" role="alert" aria-live="assertive" style="display:none;text-align:center;padding:3rem 2rem;">
+              <div style="width:80px;height:80px;background:rgba(212,175,55,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="#d4af37"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <h3 style="color:#d4af37;font-size:1.4rem;margin-bottom:.75rem;">Aanvraag verzonden!</h3>
+              <p style="color:#ccc;font-size:.95rem;line-height:1.7;">Uw aanvraag is succesvol ontvangen.<br>U ontvangt een bevestiging per e-mail.<br><span style="color:#d4af37;font-weight:600;">Wij nemen binnen 24 uur contact met u op.</span></p>
+            </div>
           </div>
         </div>
       </div>
@@ -989,8 +999,16 @@
 </svg>  </button>
 
   <!-- Flatpickr JS -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/nl.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/nl.js"></script>
+  <script>
+    flatpickr("#date", {
+      locale: "nl",
+      minDate: "today",
+      dateFormat: "d-m-Y",
+      disableMobile: false,
+    });
+  </script>
 
   <!-- JavaScript -->
   <script src="js/script.js" defer></script>
@@ -1102,6 +1120,22 @@
   if(ramenCb&&ramenBadge){
     ramenCb.addEventListener('change',function(){
       ramenBadge.textContent=this.checked?'✓ Toegevoegd':'+ Op aanvraag';
+    });
+  }
+
+  // File upload label update
+  var fotosInput=document.getElementById('form-fotos');
+  var fileLabel=document.getElementById('fileLabel');
+  var fileText=document.getElementById('fileText');
+  if(fotosInput&&fileText){
+    fotosInput.addEventListener('change',function(){
+      if(this.files&&this.files.length){
+        fileText.textContent=this.files.length+' foto'+(this.files.length>1?'s':'')+' geselecteerd';
+        fileLabel&&fileLabel.classList.add('has-files');
+      } else {
+        fileText.textContent="Klik om foto's te uploaden";
+        fileLabel&&fileLabel.classList.remove('has-files');
+      }
     });
   }
 

@@ -2594,6 +2594,46 @@ span.flatpickr-weekday {
   fill: #d4af37 !important;
 }
 
+/* ===== FILE UPLOAD ===== */
+.file-upload-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 2px dashed rgba(212,175,55,0.35);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.02);
+}
+
+.file-upload-area:hover {
+  border-color: rgba(212,175,55,0.7);
+  background: rgba(212,175,55,0.05);
+}
+
+.file-upload-area.has-files {
+  border-color: #d4af37;
+  border-style: solid;
+  background: rgba(212,175,55,0.08);
+}
+
+.file-upload-area div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.file-upload-area strong {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.file-upload-area span {
+  color: #888;
+  font-size: 0.76rem;
+}
+
 /* ===== MOBILE FIXES ===== */
 @media (max-width: 768px) {
   /* WhatsApp & scroll-top → right side */

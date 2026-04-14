@@ -494,22 +494,3 @@ if ('IntersectionObserver' in window) {
   lazyImages.forEach(img => imageObserver.observe(img));
 }
 
-/* ===== FLATPICKR DATE PICKER ===== */
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof flatpickr !== 'undefined') {
-    flatpickr("#date", {
-      locale: "nl",
-      minDate: "today",
-      dateFormat: "d-m-Y",
-      disableMobile: true,
-    });
-  }
-
-  const ramenCheckbox = document.getElementById('ramen');
-  const ramenBadge = document.getElementById('ramenBadge');
-  if (ramenCheckbox && ramenBadge) {
-    ramenCheckbox.addEventListener('change', function() {
-      ramenBadge.textContent = this.checked ? '✓ Toegevoegd' : '+ Op aanvraag';
-    });
-  }
-});
