@@ -2636,7 +2636,7 @@ span.flatpickr-weekday {
 
 /* ===== MOBILE FIXES ===== */
 @media (max-width: 768px) {
-  /* WhatsApp & scroll-top → right side */
+  /* WhatsApp → right side */
   .float-whatsapp {
     left: auto;
     right: 20px;
@@ -2645,42 +2645,69 @@ span.flatpickr-weekday {
     height: 52px;
   }
 
+  /* Hide scroll-top on mobile */
   .scroll-top {
-    left: auto;
-    right: 20px;
-    bottom: 84px;
-    width: 44px;
-    height: 44px;
+    display: none !important;
   }
 
-  /* Footer padding */
+  /* Footer — more padding from edges */
+  .footer-top {
+    padding: 40px 0 30px;
+  }
+
   .footer-top .container,
   .footer-bottom .container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .footer-grid {
-    padding: 0 4px;
+    padding: 0;
+    gap: 28px;
   }
 
-  /* Social icons at bottom of footer on mobile */
+  /* Social icons — show below brand text */
   .footer-brand {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-brand .logo {
+    margin-bottom: 0;
+  }
+
+  .footer-brand-text {
+    margin-bottom: 0;
   }
 
   .footer-social {
-    order: 10;
-    margin-top: 16px;
-    justify-content: flex-start;
+    display: flex !important;
     flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 4px;
   }
 
+  .footer-social a {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Footer bottom text */
   .footer-bottom p {
-    padding: 0 12px;
-    line-height: 1.8;
+    font-size: 0.78rem;
+    line-height: 2;
+    padding: 0 8px;
+  }
+
+  .footer-sep {
+    display: none;
+  }
+
+  .footer-bottom p a {
+    display: inline-block;
+    margin: 2px 6px;
   }
 }
 
