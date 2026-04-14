@@ -1991,23 +1991,56 @@ input, textarea, select {
   .hero .container {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 60px 20px;
+    padding: 44px 20px 28px;
   }
 
   .hero-image {
     display: none;
   }
 
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-bg::before {
+    background:
+      linear-gradient(180deg, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.58) 36%, rgba(10,10,10,0.28) 100%),
+      url('../images/windo.png') center center / cover no-repeat;
+  }
+
+  .hero-overlay {
+    background:
+      radial-gradient(ellipse 70% 44% at 50% 10%, rgba(212,175,55,0.14) 0%, transparent 62%),
+      linear-gradient(180deg, rgba(10,10,10,0.16) 0%, rgba(10,10,10,0.34) 100%);
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    line-height: 1.22;
+    margin-bottom: 18px;
+  }
+
   .hero-desc {
-    margin: 0 auto 35px;
+    max-width: 38ch;
+    margin: 0 auto 24px;
+    font-size: 0.98rem;
+    line-height: 1.75;
   }
 
   .hero-actions {
     justify-content: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .hero .btn-lg {
+    min-width: 250px;
   }
 
   .hero-stats {
     margin: 0 auto;
+    max-width: 620px;
+    padding: 16px 18px;
   }
 
   .features-grid {
@@ -2058,6 +2091,68 @@ input, textarea, select {
     padding: 60px 0;
   }
 
+  .hero .container {
+    padding: 34px 16px 24px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 8.2vw, 2.35rem);
+    margin-bottom: 16px;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .hero .btn-lg {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    padding: 14px 18px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 100%;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .hero-stat {
+    padding: 10px 8px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+  }
+
+  .hero-stat strong {
+    font-size: 1.35rem;
+  }
+
+  .hero-stat span {
+    font-size: 1rem;
+  }
+
+  .hero-stat p {
+    font-size: 0.72rem;
+  }
+
+  .hero-stat-divider,
+  .scroll-down {
+    display: none;
+  }
+
   .top-bar {
     display: none;
   }
@@ -2096,21 +2191,20 @@ input, textarea, select {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.72rem;
   }
 
   .hero-stats {
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
-  .hero-stat-divider {
-    display: none;
+  .hero-desc {
+    font-size: 0.92rem;
   }
 
   .btn-lg {
-    padding: 13px 24px;
+    padding: 13px 20px;
     font-size: 0.95rem;
   }
 
