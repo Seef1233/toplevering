@@ -74,40 +74,6 @@
   }
   </script>
 
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Welke schoonmaakdiensten bieden jullie aan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wij bieden kantoorschoonmaak (v.a. €35/u), eindschoonmaak, dieptereiniging en zakelijke contracten aan."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "In welke plaatsen zijn jullie actief?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wij zijn actief in Amersfoort, Soest, Leusden, Baarn, Nijkerk, Hoevelaken, Bunschoten, Woudenberg en Spakenburg."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hoe snel reageren jullie op een offerte aanvraag?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Wij reageren doorgaans binnen 24 uur op uw offerte aanvraag. Voor spoed kunt u ons direct bellen op 06 13 28 80 23."
-        }
-      }
-    ]
-  }
-  </script>
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -118,7 +84,7 @@
     /* SVG icon helpers */
     .ico { display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; }
     .ico svg { display:block; }
-    
+
     /* Material Symbols font */
     .ms {
       font-family: 'Material Symbols Outlined';
@@ -152,9 +118,6 @@
     }else{setTimeout(loadGTM,3000);}
   </script>
 
-  <!-- Flatpickr -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
-
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 
@@ -172,18 +135,18 @@
   <header id="navbar" role="banner">
     <nav class="navbar" aria-label="Hoofdnavigatie">
       <div class="container">
-        <a href="#" class="logo" aria-label="Top Aflevering - Terug naar home">
+        <a href="index.html" class="logo" aria-label="Top Aflevering - Terug naar home">
           <img src="images/logo_new.svg" alt="Top Aflevering logo" style="height:48px;width:auto;display:block;" />
         </a>
 
         <ul class="nav-links" role="list">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#services" class="nav-link">Diensten</a></li>
-          <li><a href="#about" class="nav-link">Over Ons</a></li>
-          <li><a href="#pricing" class="nav-link">Prijzen</a></li>
-          <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="diensten.html" class="nav-link">Diensten</a></li>
+          <li><a href="over-ons.html" class="nav-link">Over Ons</a></li>
+          <li><a href="prijzen.html" class="nav-link">Prijzen</a></li>
+          <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
 
         <a href="tel:+31613288023" class="btn btn-primary nav-cta" aria-label="Bel ons nu">
@@ -199,13 +162,13 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobiel menu" aria-hidden="true">
       <ul role="list">
-        <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#services" class="nav-link">Diensten</a></li>
-        <li><a href="#about" class="nav-link">Over Ons</a></li>
-        <li><a href="#pricing" class="nav-link">Prijzen</a></li>
-        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-        <li><a href="#faq" class="nav-link">FAQ</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="diensten.html" class="nav-link">Diensten</a></li>
+        <li><a href="over-ons.html" class="nav-link">Over Ons</a></li>
+        <li><a href="prijzen.html" class="nav-link">Prijzen</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -233,10 +196,10 @@
             Kantoorschoonmaak, eindschoonmaak, zakelijke contracten en meer. Snel, netjes en voordelig.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary btn-lg">
+            <a href="contact.html" class="btn btn-primary btn-lg">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg> Gratis Offerte Aanvragen
             </a>
-            <a href="#services" class="btn btn-outline btn-lg">
+            <a href="diensten.html" class="btn btn-outline btn-lg">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg> Bekijk Onze Diensten
             </a>
           </div>
@@ -264,7 +227,7 @@
           </div>
         </div>
 
-        <a href="#services" class="scroll-down" aria-label="Scroll naar volgende sectie" title="Scroll naar volgende sectie">
+        <a href="diensten.html" class="scroll-down" aria-label="Scroll naar volgende sectie" title="Scroll naar volgende sectie">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
@@ -288,7 +251,7 @@
       </div>
 
       <div class="hero-scroll" aria-hidden="true">
-        <a href="#services" title="Ga naar diensten">
+        <a href="diensten.html" title="Ga naar diensten">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
       </div>
@@ -330,120 +293,6 @@
       </div>
     </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
-    <section id="services" class="services section-padding" aria-labelledby="services-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Onze Diensten</span>
-          <h2 id="services-title" class="section-title">Schoonmaakdiensten <span class="highlight">voor elke behoefte</span></h2>
-          <p class="section-desc">Van eindschoonmaak tot zakelijke contracten — Top Aflevering regelt het voor u in Amersfoort en omgeving</p>
-        </div>
-
-        <div class="services-grid">
-
-          <article class="service-card featured" itemscope itemtype="https://schema.org/Service">
-            <div class="service-badge">Meest Gevraagd</div>
-            <h3 itemprop="name">Kantoor & Bedrijfsschoonmaak</h3>
-            <p itemprop="description">Professionele schoonmaak voor kantoren en bedrijven. Een schone werkomgeving verhoogt de productiviteit en uitstraling.</p>
-            <ul class="service-features" aria-label="Kenmerken van de dienst">
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Dagelijks of periodiek</li>
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Werkoppervlakken & sanitair</li>
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Vanaf €35 per uur</li>
-            </ul>
-            <a href="#contact" class="service-link" aria-label="Boek kantoorschoonmaak">Offerte aanvragen <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
-          </article>
-
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <h3 itemprop="name">Eindschoonmaak</h3>
-            <p itemprop="description">Verhuist u? Wij zorgen voor een perfecte eindschoonmaak zodat u de sleutels zorgeloos kunt inleveren of overdragen.</p>
-            <ul class="service-features" aria-label="Kenmerken van de dienst">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Compleet van vloer tot plafond</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Inclusief kasten en apparaten</li>
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Prijs op aanvraag</li>
-            </ul>
-            <a href="#contact" class="service-link" aria-label="Boek eindschoonmaak">Offerte aanvragen <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
-          </article>
-
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <h3 itemprop="name">Zakelijk Contract</h3>
-            <p itemprop="description">Vaste schoonmaakcontracten voor kantoren, winkels, horeca, salons, apotheken en meer. Betrouwbaar en op maat.</p>
-            <ul class="service-features" aria-label="Kenmerken van de dienst">
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Kantoren & Winkels</li>
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Horeca & Restaurants</li>
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Prijs op aanvraag</li>
-            </ul>
-            <a href="#contact" class="service-link" aria-label="Boek zakelijk contract">Offerte aanvragen <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
-          </article>
-
-          <article class="service-card" itemscope itemtype="https://schema.org/Service">
-            <h3 itemprop="name">Raam- & Vensterreiniging</h3>
-            <p itemprop="description">Professionele reiniging van ramen en raamkozijnen, zowel binnen als buiten. Kristalhelder en streepvrij voor optimaal natuurlijk licht.</p>
-            <ul class="service-features" aria-label="Kenmerken van de dienst">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Binnenramen & buitenramen</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Raamkozijnen schoongemaakt</li>
-              <li><span class="ms" style="font-size:.85rem">check_circle</span> Prijs op aanvraag</li>
-            </ul>
-            <a href="#contact" class="service-link" aria-label="Boek vensterreiniging">Offerte aanvragen <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section id="about" class="about section-padding" aria-labelledby="about-title">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-image" aria-hidden="true">
-            <div class="about-img-main">
-              <img src="images/img6.jpg" alt="صاحب الشركة" class="about-owner-image">
-            </div>
-          </div>
-
-          <div class="about-content">
-            <span class="section-tag">Over Ons</span>
-            <h2 id="about-title" class="section-title">Top Aflevering — uw <span class="highlight">betrouwbare partner</span> in Amersfoort</h2>
-            <p class="about-text">
-              Top Aflevering is een professioneel schoonmaakbedrijf gevestigd in Amersfoort. Wij bedienen meer dan 500 tevreden klanten
-              in Amersfoort, Soest, Leusden, Baarn, Nijkerk, Hoevelaken en omgeving.
-            </p>
-            <p class="about-text">
-              Ons team werkt snel, netjes en betrouwbaar. Of het nu gaat om een eenmalige schoonmaak of een vast contract —
-              wij leveren altijd kwaliteit. U ontvangt binnen 24 uur een vrijblijvende offerte op maat.
-            </p>
-
-            <div class="about-features">
-              <div class="about-feature">
-                <div class="about-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12l-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 3 8.6 1.5 6.71 4.69 3.1 5.5l.34 3.7L1 12l2.44 2.79-.34 3.7 3.61.82 1.89 3.2L12 21l3.4 1.5 1.89-3.19 3.61-.82-.34-3.69L23 12zm-12.91 4.72l-3.8-3.81 1.48-1.48 2.32 2.33 5.85-5.87 1.48 1.48-7.33 7.35z"/></svg></div>
-                <div>
-                  <h4>Officieel Geregistreerd</h4>
-                  <p>KvK-nummer 98679058 — volledig legaal en betrouwbaar</p>
-                </div>
-              </div>
-              <div class="about-feature">
-                <div class="about-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-                <div>
-                  <h4>Lokaal in Amersfoort</h4>
-                  <p>Actief in Amersfoort, Soest, Leusden, Baarn, Nijkerk en meer</p>
-                </div>
-              </div>
-              <div class="about-feature">
-                <div class="about-feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-                <div>
-                  <h4>4.8★ op Google</h4>
-                  <p>Beoordeeld door echte klanten — transparant en eerlijk</p>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contact" class="btn btn-primary">
-              <span class="ms">support_agent</span> Neem Contact Op
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== STATS SECTION ===== -->
     <section class="stats-section" aria-label="Onze statistieken en cijfers">
       <div class="stats-bg" aria-hidden="true"></div>
@@ -456,7 +305,7 @@
           </div>
           <div class="stat-item">
             <div class="stat-icon" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-            <strong class="stat-number">4.8</strong><span class="stat-plus">★</span>
+            <strong class="stat-number">4.8</strong><span class="stat-plus">&#9733;</span>
             <p>Google beoordeling</p>
           </div>
           <div class="stat-item">
@@ -473,438 +322,251 @@
       </div>
     </section>
 
-    <!-- ===== PRICING SECTION ===== -->
-    <section id="pricing" class="pricing section-padding" aria-labelledby="pricing-title">
+    <!-- ===== SERVICES PREVIEW ===== -->
+    <section class="home-services section-padding" aria-labelledby="home-services-title">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Tarieven</span>
-          <h2 id="pricing-title" class="section-title">Transparante en <span class="highlight">scherpe prijzen</span></h2>
-          <p class="section-desc">Geen verborgen kosten — altijd een eerlijke prijs op maat</p>
+          <span class="section-tag">Onze diensten</span>
+          <h2 id="home-services-title" class="section-title">Schoonmaak voor elke situatie</h2>
+          <p class="section-desc">
+            Van kantoren tot eindschoonmaak: wij leveren netjes werk, duidelijke afspraken en een offerte op maat.
+          </p>
         </div>
 
-        <div class="pricing-grid">
-
-
-          <article class="pricing-card featured" itemscope itemtype="https://schema.org/Offer">
-            <div class="pricing-badge">Beste Keuze</div>
-            <div class="pricing-header">
-              <h3 itemprop="name">Kantoor & Bedrijf</h3>
-              <div class="pricing-price">
-                <span class="price" itemprop="price">35</span>
-                <span class="currency" itemprop="priceCurrency">€</span>
-                <span class="period">/ uur</span>
-              </div>
-              <p>Ideaal voor kantoren & bedrijven</p>
-            </div>
-            <ul class="pricing-features" aria-label="Kenmerken kantoorschoonmaak">
-              <li><i class="fas fa-check" aria-hidden="true"></i> Dagelijks of periodiek</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Werkoppervlakken desinfecteren</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Sanitair schoonmaken</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Vloeren & entree</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Afval verwijderen</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Vaste contracten mogelijk</li>
-            </ul>
-            <a href="#contact" class="btn btn-primary" aria-label="Vraag offerte kantoorschoonmaak aan">Offerte Aanvragen</a>
+        <div class="home-services-grid">
+          <article class="home-service-card">
+            <span class="home-service-icon ms" aria-hidden="true">business_center</span>
+            <h3>Kantoorschoonmaak</h3>
+            <p>Representatieve werkplekken, sanitaire ruimtes en algemene ruimtes schoon volgens afspraak.</p>
+            <a href="diensten.html" class="service-link">Bekijk dienst <span aria-hidden="true">-&gt;</span></a>
           </article>
 
-          <article class="pricing-card" itemscope itemtype="https://schema.org/Offer">
-            <div class="pricing-header">
-              <h3 itemprop="name">Eindschoonmaak & Overig</h3>
-              <div class="pricing-price">
-                <span class="price" itemprop="price">Op</span>
-                <span class="currency" itemprop="priceCurrency"></span>
-                <span class="period">aanvraag</span>
-              </div>
-              <p>Voor specifieke schoonmaakbehoeften op maat</p>
-            </div>
-            <ul class="pricing-features" aria-label="Kenmerken overige diensten">
-              <li><i class="fas fa-check" aria-hidden="true"></i> Eindschoonmaak bij verhuizing</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Airbnb & verhuurschoonmaak</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Dieptereiniging</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Zakelijke contracten</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Horeca & winkels</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Prijs op maat</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline" aria-label="Vraag offerte aan">Offerte Aanvragen</a>
+          <article class="home-service-card">
+            <span class="home-service-icon ms" aria-hidden="true">cleaning_services</span>
+            <h3>Eindschoonmaak</h3>
+            <p>Grondige oplevering na verhuizing, verbouwing of huurperiode, met oog voor details.</p>
+            <a href="diensten.html" class="service-link">Bekijk dienst <span aria-hidden="true">-&gt;</span></a>
           </article>
 
-        </div>
+          <article class="home-service-card">
+            <span class="home-service-icon ms" aria-hidden="true">bed</span>
+            <h3>Airbnb / Verhuur</h3>
+            <p>Snelle wisselschoonmaak voor verhuurwoningen, gastenverblijven en appartementen.</p>
+            <a href="diensten.html" class="service-link">Bekijk dienst <span aria-hidden="true">-&gt;</span></a>
+          </article>
 
-        <p class="pricing-note">
-          <i class="fas fa-info-circle" aria-hidden="true"></i>
-          Alle tarieven zijn inclusief materialen. Voor een exacte prijsopgave
-          <a href="#contact">vraag gratis een offerte aan</a> — reactie binnen 24 uur.
-        </p>
+          <article class="home-service-card">
+            <span class="home-service-icon ms" aria-hidden="true">water_drop</span>
+            <h3>Dieptereiniging</h3>
+            <p>Extra krachtige reiniging voor keuken, badkamer, vloeren en plekken die meer aandacht vragen.</p>
+            <a href="diensten.html" class="service-link">Bekijk dienst <span aria-hidden="true">-&gt;</span></a>
+          </article>
+
+          <article class="home-service-card">
+            <span class="home-service-icon ms" aria-hidden="true">window</span>
+            <h3>Raam- & Glasreiniging</h3>
+            <p>Heldere ramen binnen en buiten, geschikt voor woningen, winkels en bedrijfsruimtes.</p>
+            <a href="diensten.html" class="service-link">Bekijk dienst <span aria-hidden="true">-&gt;</span></a>
+          </article>
+
+          <article class="home-service-card home-service-card-strong">
+            <span class="home-service-icon ms" aria-hidden="true">handshake</span>
+            <h3>Contract zakelijk</h3>
+            <p>Vaste schoonmaakmomenten voor bedrijven met een betrouwbaar team en heldere planning.</p>
+            <a href="contact.html" class="service-link">Vraag offerte aan <span aria-hidden="true">-&gt;</span></a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
-    <section id="testimonials" class="testimonials section-padding" aria-labelledby="testimonials-title">
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="home-proof section-padding" aria-labelledby="home-proof-title">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Klantreviews</span>
-          <h2 id="testimonials-title" class="section-title">Wat zeggen <span class="highlight">onze klanten</span> over ons</h2>
-          <p class="section-desc">Echte beoordelingen van echte klanten uit Amersfoort en omgeving</p>
-          <div style="display:flex;justify-content:center;gap:.4rem;margin:.5rem 0 .3rem" role="img" aria-label="5 sterren beoordeling">
-            <span style="color:#f59e0b;font-size:1rem">★★★★★</span>
-          </div>
-          <p style="font-size:.8rem;color:#888;margin-bottom:1rem">4.8 · 24+ beoordelingen via Google</p>
-          <a href="https://maps.app.goo.gl/6v4gcETGmJS75BNi6" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(var(--primary-rgb),.25);border-radius:8px;padding:.7rem 1.2rem;font-size:.82rem;color:inherit;text-decoration:none;margin-bottom:2rem" aria-label="Bekijk onze Google reviews">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            Bekijk onze Google reviews →
-          </a>
-        </div>
-
-        <div class="testimonials-slider" role="region" aria-label="Klantbeoordelingen">
-          <div class="testimonials-track" id="testimonialsTrack">
-
-            <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
-              <div class="testimonial-stars" aria-label="Beoordeling 5 sterren">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-              </div>
-              <blockquote itemprop="reviewBody">
-                "Uitstekende service! Het team werkzaam professioneel, grondig en met veel oog voor detail. Alles werd netjes afgelaten en de communicatie was duidelijk en vriendelijk. Stipt op tijd en absoluut betrouwbaar."
-              </blockquote>
-              <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <div class="testimonial-avatar" aria-hidden="true">MG</div>
-                <div>
-                  <strong itemprop="name">MG iMeeF</strong>
-                  <span>Google Review</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
-              <div class="testimonial-stars" aria-label="Beoordeling 5 sterren">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-              </div>
-              <blockquote itemprop="reviewBody">
-                "Ik heb Top Aflevering ingehuurd en ben erg tevreden! Ze werken netjes, zijn op tijd en laten alles schoon en fris achter. Je merkt dat ze hun werk serious nemen en oog hebben voor detail. De communicatie verliep ook prettig. Voor mij zeker een aanbeveling, ik ga ze vaker inschakelen."
-              </blockquote>
-              <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <div class="testimonial-avatar" aria-hidden="true">HA</div>
-                <div>
-                  <strong itemprop="name">Hady</strong>
-                  <span>Google Review</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
-              <div class="testimonial-stars" aria-label="Beoordeling 4 sterren">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star-half-alt" aria-hidden="true"></i>
-              </div>
-              <blockquote itemprop="reviewBody">
-                "Heel blij met Top Aflevering! Mijn huis is weer fris, schoon en tot in de puntjes verzorgd. Echt een topteam! 👍"
-              </blockquote>
-              <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <div class="testimonial-avatar" aria-hidden="true">BA</div>
-                <div>
-                  <strong itemprop="name">Bassel Alkhatib</strong>
-                  <span>Google Review</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
-              <div class="testimonial-stars" aria-label="Beoordeling 4 sterren">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star-half-alt" aria-hidden="true"></i>
-              </div>
-              <blockquote itemprop="reviewBody">
-                "Top service en hoog kwaliteit blijf zo door"
-              </blockquote>
-              <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <div class="testimonial-avatar" aria-hidden="true">MA</div>
-                <div>
-                  <strong itemprop="name">Mahmoud Alobaid</strong>
-                  <span>Google Review</span>
-                </div>
-              </div>
-            </article>
-
+        <div class="home-proof-grid">
+          <div class="home-proof-copy">
+            <span class="section-tag">Waarom Top Aflevering</span>
+            <h2 id="home-proof-title" class="section-title">Snel, betrouwbaar en professioneel geregeld</h2>
+            <p class="section-desc">
+              U krijgt een duidelijk voorstel, persoonlijk contact en schoonmaakwerk dat past bij uw ruimte en planning.
+            </p>
+            <div class="home-proof-actions">
+              <a href="contact.html" class="btn btn-primary">Gratis offerte aanvragen</a>
+              <a href="tel:+31613288023" class="btn btn-outline">Bel 06 13 28 80 23</a>
+            </div>
           </div>
 
-          <div class="testimonials-controls" aria-label="Navigatie beoordelingen">
-            <button class="testimonial-btn" id="prevBtn" aria-label="Vorige beoordeling">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-            </button>
-            <div class="testimonials-dots" id="testimonialsDots" role="tablist" aria-label="Kies een beoordeling"></div>
-            <button class="testimonial-btn" id="nextBtn" aria-label="Volgende beoordeling">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-            </button>
+          <div class="home-proof-list" aria-label="Onze voordelen">
+            <div class="home-proof-item">
+              <span class="ms" aria-hidden="true">schedule</span>
+              <div>
+                <h3>Reactie binnen 24 uur</h3>
+                <p>U weet snel waar u aan toe bent.</p>
+              </div>
+            </div>
+            <div class="home-proof-item">
+              <span class="ms" aria-hidden="true">verified</span>
+              <div>
+                <h3>Betrouwbaar en geregistreerd</h3>
+                <p>KvK 98679058, professioneel en transparant.</p>
+              </div>
+            </div>
+            <div class="home-proof-item">
+              <span class="ms" aria-hidden="true">location_on</span>
+              <div>
+                <h3>Lokaal in Amersfoort</h3>
+                <p>Actief in Amersfoort en omliggende plaatsen.</p>
+              </div>
+            </div>
+            <div class="home-proof-item">
+              <span class="ms" aria-hidden="true">workspace_premium</span>
+              <div>
+                <h3>Vrijblijvende offerte</h3>
+                <p>Helder voorstel zonder verplichting.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FAQ SECTION ===== -->
-    <section id="faq" class="faq section-padding" aria-labelledby="faq-title">
+    <!-- ===== ABOUT PREVIEW ===== -->
+    <section class="home-about section-padding" aria-labelledby="home-about-title">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Veelgestelde Vragen</span>
-          <h2 id="faq-title" class="section-title">Vragen over <span class="highlight">onze diensten</span></h2>
-          <p class="section-desc">Staat uw vraag er niet bij? Bel ons: 06 13 28 80 23</p>
-        </div>
-
-        <div class="faq-list" role="list">
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
-              <span>Welke diensten biedt Top Aflevering aan?</span>
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer" id="faq-answer-1" aria-hidden="true">
-              <p>Wij bieden kantoor- en bedrijfsschoonmaak (v.a. €35/u), eindschoonmaak, dieptereiniging en zakelijke contracten voor kantoren, winkels, horeca, salons, apotheken en meer.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
-              <span>In welke plaatsen zijn jullie actief?</span>
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer" id="faq-answer-2" aria-hidden="true">
-              <p>Wij zijn actief in Amersfoort, Soest, Leusden, Baarn, Nijkerk, Hoevelaken, Bunschoten, Woudenberg en Spakenburg. Twijfelt u of wij bij u in de buurt komen? Neem gerust contact op!</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
-              <span>Hoe snel ontvang ik een offerte?</span>
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer" id="faq-answer-3" aria-hidden="true">
-              <p>U ontvangt doorgaans binnen 24 uur een vrijblijvende offerte op maat. Voor spoed kunt u ons direct bellen op 06 13 28 80 23 — wij staan u graag te woord.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
-              <span>Bieden jullie garantie op de schoonmaak?</span>
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer" id="faq-answer-4" aria-hidden="true">
-              <p>Ja, wij bieden 100% tevredenheidsgarantie. Bent u niet tevreden met het resultaat? Dan lossen wij het kosteloos op. Uw tevredenheid is onze prioriteit.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
-              <span>Moet ik thuis zijn tijdens de schoonmaak?</span>
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer" id="faq-answer-5" aria-hidden="true">
-              <p>Dat is niet verplicht. U kunt ons een sleutel geven of toegang regelen. Ons team werkt betrouwbaar en discreet. Na afronding laten wij alles netjes achter.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
-              <span>Welke betaalmethoden accepteren jullie?</span>
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer" id="faq-answer-6" aria-hidden="true">
-              <p>Wij accepteren contant, pin, Wero en bankoverschrijving. Betaling vindt plaats na voltooiing van de dienst en uw goedkeuring van het resultaat.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact" class="contact section-padding" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Contact</span>
-          <h2 id="contact-title" class="section-title">Vraag een <span class="highlight">gratis offerte</span> aan</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Contactgegevens</h3>
-
-            <address>
-              <div class="contact-info-item">
-                <a href="tel:+31613288023" class="contact-info-icon" aria-label="اتصل بنا"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
-                <div>
-                  <strong>Bel ons direct</strong>
-                  <a href="tel:+31613288023">06 13 28 80 23</a>
-                </div>
-              </div>
-              <div class="contact-info-item">
-                <a href="mailto:info@topaflevering.nl" class="contact-info-icon" aria-label="Send email"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
-                <div>
-                  <strong>E-mail</strong>
-                  <a href="mailto:info@topaflevering.nl">info@topaflevering.nl</a>
-                </div>
-              </div>
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
-                <div>
-                  <strong>Werkgebied</strong>
-                  <span>Amersfoort, Soest, Leusden, Baarn, Nijkerk, Hoevelaken en omgeving</span>
-                </div>
-              </div>
-              <div class="contact-info-item">
-                <div class="contact-info-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
-                <div>
-                  <strong>Openingstijden</strong>
-                  <span>Maandag - Vrijdag: 08:00 - 18:00</span>
-                  <span>Zaterdag & Zondag: Gesloten</span>
-                </div>
-              </div>
-            </address>
-
-            <div class="contact-whatsapp">
-              <a href="https://wa.me/31613288023?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">
-                <svg width="18" height="18" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M35.2 12.8A15.7 15.7 0 0024.1 8C15.7 8 8.9 14.8 8.9 23.2c0 2.7.7 5.3 2 7.6L8.8 39.2l8.6-2.2a15.8 15.8 0 007.6 1.9c8.4 0 15.2-6.8 15.2-15.2 0-4.1-1.6-7.9-4.4-10.9zm-11.1 23.4a13 13 0 01-6.6-1.8l-.5-.3-4.9 1.3 1.3-4.7-.3-.5a13 13 0 01-2-7c0-7.2 5.9-13 13.1-13 3.5 0 6.8 1.4 9.2 3.8a12.9 12.9 0 013.8 9.2c0 7.2-5.9 13-13.1 13zm7.2-9.7c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2s-1 1.3-1.2 1.5c-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-.9-.8-1.9-2.1-2.1-2.6 0-.2.1-.4.3-.6l.6-.7c.2-.2.2-.4.3-.6.1-.2 0-.4-.1-.6-.1-.2-1-2.4-1.4-3.2-.3-.8-.7-.7-.9-.7H17c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.3 3.4 1.5 3.6c.2.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.1-.3-.2-.7-.4z"/></svg> Direct WhatsApp-en
-              </a>
-            </div>
-
-          </div>
-
-          <div class="contact-form-wrapper">
-            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate aria-label="Offerte aanvraagformulier">
-              <input type="hidden" name="access_key" value="9b306565-145c-42b4-abbf-cf50a20816c8" />
-              <input type="hidden" id="svc-hidden" name="dienst" value="" />
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="cf-naam">Naam <span class="required" aria-label="verplicht">*</span></label>
-                  <input type="text" id="cf-naam" name="naam" placeholder="Jan de Vries"
-                    required minlength="2" autocomplete="name" aria-required="true" />
-                </div>
-                <div class="form-group">
-                  <label for="cf-tel">Telefoon <span class="required" aria-label="verplicht">*</span></label>
-                  <input type="tel" id="cf-tel" name="telefoon" placeholder="06 12 34 56 78"
-                    required autocomplete="tel" aria-required="true" />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="cf-email">E-mailadres <span class="required" aria-label="verplicht">*</span></label>
-                  <input type="email" id="cf-email" name="email" placeholder="jan@email.nl"
-                    required autocomplete="email" aria-required="true" />
-                </div>
-                <div class="form-group">
-                  <label for="cf-bedrijf">Bedrijfsnaam</label>
-                  <input type="text" id="cf-bedrijf" name="bedrijf" placeholder="Optioneel" autocomplete="organization" />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label id="service-label" for="service-trigger">Type schoonmaak</label>
-                  <div class="custom-select" id="service-dropdown">
-                    <select id="service" name="service_type" aria-required="true" class="native-select-hidden" tabindex="-1">
-                      <option value="" disabled selected>Kies een dienst</option>
-                      <option value="kantoor">Kantoor / Bedrijf (v.a. &euro;35/u)</option>
-                      <option value="eindschoonmaak">Eindschoonmaak</option>
-                      <option value="airbnb">Airbnb / Verhuur</option>
-                      <option value="dieptereiniging">Dieptereiniging</option>
-                      <option value="zakelijk">Contract zakelijk</option>
-                      <option value="other">Overig</option>
-                    </select>
-                    <button type="button" class="custom-select-trigger" id="service-trigger" aria-labelledby="service-label service-value" aria-haspopup="listbox" aria-expanded="false">
-                      <span class="custom-select-trigger-inner">
-                        <svg class="custom-select-leading-icon" id="service-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 21h16V10H4v11zm2-9h3v2H6v-2zm0 4h3v2H6v-2zm5-4h3v2h-3v-2zm0 4h3v2h-3v-2zm5-4h2v6h-2v-6zM4 8l8-5 8 5v1H4V8z"/></svg>
-                        <span class="custom-select-value" id="service-value">Kies een dienst</span>
-                      </span>
-                      <svg class="custom-select-caret" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
-                    </button>
-                    <div class="custom-select-menu" role="listbox" aria-labelledby="service-label" hidden>
-                      <button type="button" class="custom-select-option" data-value="kantoor" data-label="Kantoor / Bedrijf (v.a. &euro;35/u)" role="option">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 21h16V10H4v11zm2-9h3v2H6v-2zm0 4h3v2H6v-2zm5-4h3v2h-3v-2zm0 4h3v2h-3v-2zm5-4h2v6h-2v-6zM4 8l8-5 8 5v1H4V8z"/></svg>
-                        <span>Kantoor / Bedrijf (v.a. &euro;35/u)</span>
-                      </button>
-                      <button type="button" class="custom-select-option" data-value="eindschoonmaak" data-label="Eindschoonmaak" role="option">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3zm-5.5 10 1.1 2.4L10 16.5l-2.4 1.1L6.5 20l-1.1-2.4L3 16.5l2.4-1.1L6.5 13zm11 0 1.1 2.4 2.4 1.1-2.4 1.1L17.5 20l-1.1-2.4-2.4-1.1 2.4-1.1 1.1-2.4z"/></svg>
-                        <span>Eindschoonmaak</span>
-                      </button>
-                      <button type="button" class="custom-select-option" data-value="airbnb" data-label="Airbnb / Verhuur" role="option">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 12a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v1h2v-1a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v7h-2v-2H5v2H3v-7zm2 3h14v-2a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v2z"/></svg>
-                        <span>Airbnb / Verhuur</span>
-                      </button>
-                      <button type="button" class="custom-select-option" data-value="dieptereiniging" data-label="Dieptereiniging" role="option">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 3h4l1 2v3l2 2v11H7V10l2-2V5l1-2zm-1 9v7h6v-7H9zm3-4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
-                        <span>Dieptereiniging</span>
-                      </button>
-                      <button type="button" class="custom-select-option" data-value="zakelijk" data-label="Contract zakelijk" role="option">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 4h4a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V9a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2zm0 3h4V6h-4v1z"/></svg>
-                        <span>Contract zakelijk</span>
-                      </button>
-                      <button type="button" class="custom-select-option" data-value="other" data-label="Overig" role="option">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 4h7v3h-7v-3z"/></svg>
-                        <span>Overig</span>
-                      </button>
-                    </div>
+        <div class="home-about-grid">
+          <div class="home-about-visual" data-home-about-slider>
+            <div class="home-about-slider-window">
+              <div class="home-about-track">
+                <article class="home-about-photo">
+                  <img src="images/img6.jpg" alt="Eigenaar van Top Aflevering" />
+                  <div class="home-about-badge">
+                    <strong>Eigenaar</strong>
+                    <span>Top Aflevering</span>
                   </div>
-                </div>
-                <div class="form-group">
-                  <label for="date">Gewenste datum</label>
-                  <input type="text" id="date" name="datum" placeholder="Kies een datum..." aria-label="Kies een datum voor de schoonmaak" readonly />
-                </div>
-              </div>
+                </article>
 
-              <div class="form-group">
-                <label>Extra dienst</label>
-                <label class="extra-addon" for="ramen">
-                  <input type="checkbox" id="ramen" name="extra" value="Raam- & Vensterreiniging (binnen & buiten)" />
-                  <div class="extra-addon-content">
-                    <div class="extra-addon-check" id="ramenCheck">✓</div>
-                    <div class="extra-addon-icon">🪟</div>
-                    <div class="extra-addon-text">
-                      <strong>Raam- & Vensterreiniging</strong>
-                      <span>Binnen & buiten — kristalhelder en streepvrij</span>
-                    </div>
-                    <div class="extra-addon-badge" id="ramenBadge">+ Op aanvraag</div>
+                <article class="home-about-photo">
+                  <img src="images/Malek.jpeg" alt="Malek van Top Aflevering" />
+                  <div class="home-about-badge">
+                    <strong>Malek</strong>
+                    <span>Klantencontact & Offertes</span>
                   </div>
-                </label>
+                </article>
               </div>
-              <div class="form-group">
-                <label for="cf-msg">Extra informatie</label>
-                <textarea id="cf-msg" name="bericht" rows="4"
-                  placeholder="Bijv. adres, oppervlakte, bijzonderheden..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block" id="submit-btn" aria-label="Gratis offerte aanvragen">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                <span>Gratis offerte aanvragen →</span>
-              </button>
-
-              <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:.8rem;flex-wrap:wrap">
-                <span style="font-size:.78rem;color:#888">🔒 Uw gegevens zijn veilig</span>
-                <span style="font-size:.78rem;color:#888">✓ 100% vrijblijvend</span>
-                <span style="font-size:.78rem;color:#888">⚡ Reactie binnen 24 uur</span>
-              </div>
-
-            </form>
-
-            <div id="form-success" role="alert" aria-live="assertive" style="display:none;text-align:center;padding:3rem 2rem;">
-              <div style="width:80px;height:80px;background:rgba(212,175,55,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">
-                <svg width="44" height="44" viewBox="0 0 24 24" fill="#d4af37"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              </div>
-              <h3 style="color:#d4af37;font-size:1.4rem;margin-bottom:.75rem;">Aanvraag verzonden!</h3>
-              <p style="color:#ccc;font-size:.95rem;line-height:1.7;">Uw aanvraag is succesvol ontvangen.<br>U ontvangt een bevestiging per e-mail.<br><span style="color:#d4af37;font-weight:600;">Wij nemen binnen 24 uur contact met u op.</span></p>
             </div>
+
+            <button class="home-about-arrow home-about-arrow-prev" type="button" aria-label="Vorige persoon">
+              <span class="ms" aria-hidden="true">chevron_left</span>
+            </button>
+            <button class="home-about-arrow home-about-arrow-next" type="button" aria-label="Volgende persoon">
+              <span class="ms" aria-hidden="true">chevron_right</span>
+            </button>
+
+            <div class="home-about-dots" aria-label="Personen">
+              <button type="button" class="active" aria-label="Toon eigenaar" aria-current="true"></button>
+              <button type="button" aria-label="Toon Malek"></button>
+            </div>
+          </div>
+
+          <div class="home-about-copy">
+            <div class="home-about-panel active">
+              <span class="section-tag">Over ons</span>
+              <h2 id="home-about-title" class="section-title">Een lokaal schoonmaakbedrijf met persoonlijk contact</h2>
+              <p>
+                Top Aflevering is gevestigd in Amersfoort en helpt particulieren en bedrijven met nette, betrouwbare schoonmaak.
+                De eigenaar bewaakt de kwaliteit, afspraken en professionele uitstraling van ieder project.
+              </p>
+              <p>
+                Voor vragen, planning en offertes is Malek uw vaste aanspreekpunt. Zo blijft het contact snel, duidelijk en persoonlijk.
+              </p>
+              <a href="over-ons.html" class="btn btn-primary">Meer over Top Aflevering</a>
+            </div>
+
+            <div class="home-about-panel">
+              <span class="section-tag">Klantencontact</span>
+              <h2 class="section-title">Malek helpt u snel met vragen en offertes</h2>
+              <p>
+                Malek is verantwoordelijk voor klantencontact en offertes. Hij beantwoordt uw vragen, denkt mee over de juiste schoonmaakdienst en zorgt voor een duidelijke aanvraag.
+              </p>
+              <p>
+                Zo krijgt u snel persoonlijk contact, een heldere planning en een offerte die past bij uw woning, kantoor of project.
+              </p>
+              <div class="home-about-panel-actions">
+                <a href="contact.html" class="btn btn-primary">Offerte aanvragen</a>
+                <a href="https://wa.me/31613288023?text=Hallo%20Malek%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="btn btn-outline" target="_blank" rel="noopener noreferrer">WhatsApp Malek</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS PREVIEW ===== -->
+    <section class="home-reviews section-padding" aria-labelledby="home-reviews-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Reviews</span>
+          <h2 id="home-reviews-title" class="section-title">Klanten kiezen ons voor duidelijkheid en kwaliteit</h2>
+          <p class="section-desc">4.8&#9733; op Google, beoordeeld door echte klanten uit Amersfoort en omgeving.</p>
+        </div>
+
+        <div class="home-reviews-grid">
+          <article class="home-review-card">
+            <div class="home-review-stars" aria-label="5 van 5 sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Snel contact, duidelijke afspraken en het resultaat was precies zoals beloofd."</p>
+            <strong>Particuliere klant</strong>
+          </article>
+          <article class="home-review-card">
+            <div class="home-review-stars" aria-label="5 van 5 sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Ons kantoor ziet er elke week netjes uit. Prettige communicatie en betrouwbaar team."</p>
+            <strong>Zakelijke klant</strong>
+          </article>
+          <article class="home-review-card">
+            <div class="home-review-stars" aria-label="5 van 5 sterren">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Goede prijs, professioneel werk en de offerte was snel geregeld."</p>
+            <strong>Klant uit Amersfoort</strong>
+          </article>
+        </div>
+
+        <div class="home-center-action">
+          <a href="reviews.html" class="btn btn-outline">Bekijk alle reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICE AREAS ===== -->
+    <section class="home-areas section-padding" aria-labelledby="home-areas-title">
+      <div class="container">
+        <div class="home-areas-box">
+          <div>
+            <span class="section-tag">Werkgebied</span>
+            <h2 id="home-areas-title" class="section-title">Actief in Amersfoort en omgeving</h2>
+            <p class="section-desc">Wij helpen klanten in de regio met eenmalige schoonmaak, periodieke schoonmaak en zakelijke contracten.</p>
+          </div>
+
+          <ul class="home-area-list" role="list" aria-label="Werkgebieden">
+            <li>Amersfoort</li>
+            <li>Soest</li>
+            <li>Leusden</li>
+            <li>Baarn</li>
+            <li>Nijkerk</li>
+            <li>Hoevelaken</li>
+            <li>Woudenberg</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOME CTA ===== -->
+    <section class="home-cta" aria-labelledby="home-cta-title">
+      <div class="container">
+        <div class="home-cta-box">
+          <div>
+            <h2 id="home-cta-title">Wilt u vandaag nog een offerte?</h2>
+            <p>Vertel ons wat u nodig heeft. Wij reageren binnen 24 uur met een passend voorstel.</p>
+          </div>
+          <div class="home-cta-actions">
+            <a href="contact.html" class="btn btn-primary">Vraag offerte aan</a>
+            <a href="https://wa.me/31613288023?text=Hallo%2C%20ik%20wil%20graag%20een%20offerte%20aanvragen." class="btn btn-outline" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -919,7 +581,7 @@
         <div class="footer-grid">
 
           <div class="footer-brand">
-            <a href="#" class="logo" aria-label="Top Aflevering">
+            <a href="index.html" class="logo" aria-label="Top Aflevering">
               <img src="images/logo_new.svg" alt="Top Aflevering logo" style="height:48px;width:auto;display:block;" />
             </a>
             <div class="footer-brand-text">
@@ -932,24 +594,25 @@
           <nav class="footer-nav" aria-label="Snelle links">
             <h3>Snelle Links</h3>
             <ul role="list">
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#services">Diensten</a></li>
-              <li><a href="#about">Over Ons</a></li>
-              <li><a href="#pricing">Prijzen</a></li>
-              <li><a href="#testimonials">Reviews</a></li>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="diensten.html">Diensten</a></li>
+              <li><a href="over-ons.html">Over Ons</a></li>
+              <li><a href="prijzen.html">Prijzen</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="werken-bij-ons.html" class="footer-work-link">Werken bij ons</a></li>
             </ul>
           </nav>
 
           <nav class="footer-nav" aria-label="Onze diensten">
             <h3>Onze Diensten</h3>
             <ul role="list">
-              <li><a href="#services">Kantoorschoonmaak</a></li>
-              <li><a href="#services">Eindschoonmaak</a></li>
-              <li><a href="#services">Airbnb schoonmaak</a></li>
-              <li><a href="#services">Dieptereiniging</a></li>
-              <li><a href="#services">Zakelijk contract</a></li>
+              <li><a href="diensten.html">Kantoorschoonmaak</a></li>
+              <li><a href="diensten.html">Eindschoonmaak</a></li>
+              <li><a href="diensten.html">Airbnb schoonmaak</a></li>
+              <li><a href="diensten.html">Dieptereiniging</a></li>
+              <li><a href="diensten.html">Zakelijk contract</a></li>
             </ul>
           </nav>
 
@@ -1020,210 +683,8 @@
   <circle cx="14" cy="23" r="2.2" fill="currentColor"/>
 </svg>  </button>
 
-  <!-- Flatpickr JS -->
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/nl.js"></script>
-  <script>
-    flatpickr("#date", {
-      locale: "nl",
-      minDate: "today",
-      dateFormat: "d-m-Y",
-      disableMobile: true,
-      position: "below",
-    });
-  </script>
-
   <!-- JavaScript -->
   <script src="js/script.js" defer></script>
 
-  <script>
-  document.getElementById('contactForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    var naam=document.getElementById('cf-naam');
-    var tel=document.getElementById('cf-tel');
-    var email=document.getElementById('cf-email');
-    var ok=true;
-    [naam,tel,email].forEach(function(f){
-      if(f&&!f.value.trim()){f.classList.add('err');ok=false;}
-      else if(f){f.classList.remove('err');}
-    });
-    if(!ok){naam&&naam.scrollIntoView({behavior:'smooth',block:'center'});return;}
-    var btn=document.getElementById('submit-btn');
-    btn.disabled=true;btn.querySelector('span').textContent='Versturen...';
-
-    // sync service dropdown to hidden field
-    var svc=document.getElementById('service');
-    if(svc) document.getElementById('svc-hidden').value=svc.options[svc.selectedIndex]?svc.options[svc.selectedIndex].text:'';
-
-    var clientNaam    = document.getElementById('cf-naam').value;
-    var clientEmail   = document.getElementById('cf-email').value;
-    var clientTel     = document.getElementById('cf-tel').value;
-    var clientBedrijf = document.getElementById('cf-bedrijf').value||'';
-    var clientMsg     = document.getElementById('cf-msg').value||'';
-    var clientDienst  = document.getElementById('svc-hidden').value||'';
-    var clientDatum   = (document.getElementById('date')||{}).value||'';
-    var clientRamen   = (document.getElementById('ramen')||{}).checked ? 'Ja' : 'Nee';
-
-    // === Eerste e-mail: melding naar beheerder (+ CC naar klant) ===
-    var formData=new FormData();
-    formData.append('access_key','9b306565-145c-42b4-abbf-cf50a20816c8');
-    formData.append('subject','Nieuwe offerte aanvraag — topaflevering.nl');
-    formData.append('from_name','Top Aflevering Website');
-    formData.append('name', clientNaam);
-    formData.append('email', clientEmail);
-    formData.append('replyto', clientEmail);
-    formData.append('cc', clientEmail);
-    formData.append('telefoon', clientTel);
-    formData.append('bedrijf', clientBedrijf);
-    formData.append('bericht', clientMsg);
-    formData.append('dienst', clientDienst);
-    var dateEl=document.getElementById('date');
-    if(dateEl) formData.append('datum',dateEl.value||'');
-    var ramenEl=document.getElementById('ramen');
-    if(ramenEl&&ramenEl.checked) formData.append('extra','Raam- & Vensterreiniging (binnen & buiten)');
-
-    // === Tweede e-mail: bevestiging naar klant ===
-    var bevestigingTekst =
-      'Beste ' + clientNaam + ',\n\n' +
-      'Hartelijk dank voor uw aanvraag bij Top Aflevering!\n\n' +
-      'Wij hebben uw aanvraag in goede orde ontvangen en nemen binnen 24 uur contact met u op.\n\n' +
-      '───────────────────────────\n' +
-      'UW AANVRAAGDETAILS\n' +
-      '───────────────────────────\n' +
-      '• Naam:      ' + clientNaam + '\n' +
-      '• Telefoon:  ' + clientTel + '\n' +
-      '• E-mail:    ' + clientEmail + '\n' +
-      (clientBedrijf ? '• Bedrijf:   ' + clientBedrijf + '\n' : '') +
-      (clientDienst  ? '• Dienst:    ' + clientDienst  + '\n' : '') +
-      (clientDatum   ? '• Datum:     ' + clientDatum   + '\n' : '') +
-      '• Raamreiniging: ' + clientRamen + '\n' +
-      (clientMsg     ? '• Opmerking: ' + clientMsg     + '\n' : '') +
-      '───────────────────────────\n\n' +
-      'Wij kijken ernaar uit u te mogen bedienen!\n\n' +
-      'Met vriendelijke groet,\n' +
-      'Top Aflevering\n' +
-      'Tel: 06 13 28 80 23\n' +
-      'E-mail: info@topaflevering.nl\n' +
-      'Web: topaflevering.nl';
-
-    var confirmData = new FormData();
-    confirmData.append('access_key','9b306565-145c-42b4-abbf-cf50a20816c8');
-    confirmData.append('subject','Bevestiging aanvraag — Top Aflevering');
-    confirmData.append('from_name','Top Aflevering');
-    confirmData.append('name', clientNaam);
-    confirmData.append('email', clientEmail);
-    confirmData.append('cc', clientEmail);
-    confirmData.append('replyto', 'info@topaflevering.nl');
-    confirmData.append('message', bevestigingTekst);
-
-    var showSuccess = function(){
-      document.getElementById('form-success').style.display='block';
-      document.getElementById('contactForm').style.display='none';
-    };
-
-    fetch('https://api.web3forms.com/submit',{method:'POST',body:formData})
-      .then(function(r){return r.json();})
-      .then(function(res){
-        if(!res.success) console.error('Admin mail failed:',res);
-        return fetch('https://api.web3forms.com/submit',{method:'POST',body:confirmData});
-      })
-      .then(function(r){return r.json();})
-      .then(function(res){
-        if(!res.success) console.error('Confirm mail failed:',res);
-        showSuccess();
-      })
-      .catch(function(err){
-        console.error('Form error:',err);
-        showSuccess();
-      });
-  });
-
-  // Custom service dropdown
-  var serviceDropdown=document.getElementById('service-dropdown');
-  var serviceSelect=document.getElementById('service');
-  if(serviceDropdown&&serviceSelect){
-    var serviceTrigger=document.getElementById('service-trigger');
-    var serviceValue=document.getElementById('service-value');
-    var serviceIcon=document.getElementById('service-icon');
-    var serviceOptions=serviceDropdown.querySelectorAll('.custom-select-option');
-    var closeServiceDropdown=function(){
-      serviceDropdown.classList.remove('open');
-      var menu=serviceDropdown.querySelector('.custom-select-menu');
-      if(menu) menu.hidden=true;
-      serviceTrigger&&serviceTrigger.setAttribute('aria-expanded','false');
-    };
-    var openServiceDropdown=function(){
-      serviceDropdown.classList.add('open');
-      var menu=serviceDropdown.querySelector('.custom-select-menu');
-      if(menu) menu.hidden=false;
-      serviceTrigger&&serviceTrigger.setAttribute('aria-expanded','true');
-    };
-    serviceTrigger&&serviceTrigger.addEventListener('click',function(){
-      if(serviceDropdown.classList.contains('open')) closeServiceDropdown();
-      else openServiceDropdown();
-    });
-    serviceOptions.forEach(function(option){
-      option.setAttribute('aria-selected','false');
-      option.addEventListener('click',function(){
-        var value=this.getAttribute('data-value')||'';
-        var label=this.getAttribute('data-label')||this.textContent.trim();
-        serviceSelect.value=value;
-        serviceValue.textContent=label;
-        var optionIcon=this.querySelector('svg');
-        if(serviceIcon&&optionIcon){serviceIcon.innerHTML=optionIcon.innerHTML;}
-        serviceOptions.forEach(function(item){item.setAttribute('aria-selected','false');});
-        this.setAttribute('aria-selected','true');
-        closeServiceDropdown();
-      });
-    });
-    document.addEventListener('click',function(e){
-      if(!serviceDropdown.contains(e.target)) closeServiceDropdown();
-    });
-    document.addEventListener('keydown',function(e){
-      if(e.key==='Escape') closeServiceDropdown();
-    });
-  }
-  // Badge update for ramen checkbox
-  var ramenCb=document.getElementById('ramen');
-  var ramenBadge=document.getElementById('ramenBadge');
-  if(ramenCb&&ramenBadge){
-    ramenCb.addEventListener('change',function(){
-      ramenBadge.textContent=this.checked?'✓ Toegevoegd':'+ Op aanvraag';
-    });
-  }
-
-  // err style
-  var style=document.createElement('style');
-  style.textContent='input.err{border-color:#e53e3e!important;box-shadow:0 0 0 2px rgba(229,62,62,.2)!important;}';
-  document.head.appendChild(style);
-
-  // Hide floating WhatsApp when footer is visible
-  var floatWA = document.querySelector('.float-whatsapp');
-  var footer  = document.getElementById('main-footer');
-  if(floatWA && footer && 'IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if(entry.isIntersecting) {
-          floatWA.style.opacity = '0';
-          floatWA.style.pointerEvents = 'none';
-          floatWA.style.transform = 'scale(0.8)';
-        } else {
-          floatWA.style.opacity = '1';
-          floatWA.style.pointerEvents = 'auto';
-          floatWA.style.transform = 'scale(1)';
-        }
-      });
-    }, { threshold: 0.1 });
-    obs.observe(footer);
-  }
-  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
