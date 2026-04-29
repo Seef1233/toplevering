@@ -937,13 +937,13 @@ input, textarea, select {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .about-image {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
@@ -951,6 +951,7 @@ input, textarea, select {
   background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
   border-radius: var(--radius-xl);
   height: 100%;
+  min-height: 420px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -963,7 +964,98 @@ input, textarea, select {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: var(--radius-xl);
+}
+
+/* About background image layout */
+.about.about-bg-section {
+  position: relative;
+  background: none;
+  background-image: url('../images/top_aflevering1.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  padding: 0;
+}
+
+.about-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 18, 28, 0.45);
+  z-index: 1;
+}
+
+.about-bg-container {
+  position: relative;
+  z-index: 2;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about-content-overlay {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content-overlay .section-title,
+.about-content-overlay h2,
+.about-bg-section .about-content-overlay .section-title,
+.about-bg-section .about-content-overlay h2 {
+  color: #4dd9f0 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  font-size: 2rem !important;
+  margin-bottom: 16px !important;
+}
+
+.highlight-light {
+  color: #4dd9f0 !important;
+}
+
+.about-content-overlay .about-text {
+  color: rgba(255,255,255,0.90) !important;
+  font-size: 0.95rem !important;
+  margin-bottom: 10px !important;
+}
+
+.about-content-overlay .about-features {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 14px !important;
+  flex-direction: unset !important;
+  margin: 24px 0 !important;
+}
+
+.about-content-overlay .about-feature {
+  background: rgba(255,255,255,0.10) !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: none !important;
+  padding: 16px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 10px !important;
+}
+
+.about-content-overlay .about-feature h4 {
+  color: #ffffff !important;
+  font-size: 0.9rem !important;
+}
+
+.about-content-overlay .about-feature p {
+  color: rgba(255,255,255,0.82) !important;
+  font-size: 0.8rem !important;
+}
+
+.about-content-overlay .about-feature-icon {
+  background: rgba(77,217,240,0.20) !important;
+  color: #4dd9f0 !important;
+  width: 42px !important;
+  height: 42px !important;
+  flex-shrink: 0 !important;
 }
 
 .about-big-icon {
@@ -1176,7 +1268,7 @@ input, textarea, select {
   padding: 40px 32px;
   text-align: center;
   position: relative;
-  border: 2px solid #d4af37;
+  border: 2px solid #16A34A;
   transition: var(--transition);
   box-shadow: var(--shadow);
 }
@@ -1187,7 +1279,7 @@ input, textarea, select {
 }
 
 .pricing-card.featured {
-  border-color: #d4af37;
+  border-color: #16A34A;
   background: linear-gradient(135deg, #2a2a2a 0%, #252525 100%);
   transform: scale(1.05);
   box-shadow: var(--shadow-lg);
@@ -1202,8 +1294,8 @@ input, textarea, select {
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background: #1a1a1a;
-  color: var(--white);
+  background: #15803D;
+  color: #ffffff;
   padding: 6px 24px;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -1214,7 +1306,7 @@ input, textarea, select {
 .pricing-header h3 {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #d4af37;
+  color: #15803D;
   margin-bottom: 16px;
 }
 
@@ -1225,12 +1317,12 @@ input, textarea, select {
 .price {
   font-size: 3rem;
   font-weight: 900;
-  color: #d4af37;
+  color: #16A34A;
 }
 
 .currency {
   font-size: 1.2rem;
-  color: #d4af37;
+  color: #16A34A;
   font-weight: 700;
 }
 
@@ -1300,6 +1392,150 @@ input, textarea, select {
   color: #1a1a1a;
   font-weight: 600;
   text-decoration: underline;
+}
+
+/* ===== CONTRACT CARD ===== */
+.contract-card {
+  border-color: var(--primary) !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Details verborgen standaard */
+.contract-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  text-align: left;
+}
+
+.contract-details.open {
+  max-height: 600px;
+  opacity: 1;
+}
+
+/* Toggle knop */
+.contract-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: none;
+  border: 1px dashed var(--primary);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  margin: 14px 0 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contract-toggle-btn:hover {
+  background: rgba(30,136,168,0.07);
+}
+
+.contract-toggle-icon {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.contract-toggle-btn[aria-expanded="true"] .contract-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.contract-toggle-btn[aria-expanded="true"] .contract-toggle-text::before {
+  content: "Verberg";
+}
+
+.contract-toggle-btn[aria-expanded="false"] .contract-toggle-text::before {
+  content: "";
+}
+
+.contract-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.contract-section-block {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #e8f4f6;
+}
+
+.contract-block-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.contract-block-title svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.contract-terms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contract-terms-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.contract-terms-list li svg {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contract-cancel-block {
+  background: #f0faf8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  border-top: none;
+  margin-top: 16px;
+}
+
+.contract-cancel-block .contract-block-title svg {
+  color: #e05252;
+}
+
+.contract-cancel-text {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ===== TESTIMONIALS ===== */
@@ -1437,7 +1673,7 @@ input, textarea, select {
 
 /* ===== FAQ ===== */
 .faq {
-  background: linear-gradient(135deg, #1a1a1a 0%, #1f1f1f 100%);
+  background: var(--primary-light);
 }
 
 .faq-list {
@@ -1449,20 +1685,20 @@ input, textarea, select {
 }
 
 .faq-item {
-  background: #252525;
+  background: #ffffff;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid #404040;
+  border: 1px solid #e2eef2;
   transition: var(--transition);
 }
 
 .faq-item:hover {
-  border-color: #505050;
+  border-color: var(--primary);
 }
 
 .faq-item.open {
-  border-color: #d4af37;
-  box-shadow: 0 4px 20px rgba(212,175,55,0.2);
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(30,136,168,0.12);
 }
 
 .faq-question {
@@ -1472,21 +1708,21 @@ input, textarea, select {
   justify-content: space-between;
   padding: 22px 24px;
   background: none;
-  text-align: right;
+  text-align: left;
   font-size: 1rem;
   font-weight: 700;
-  color: #d4af37;
+  color: var(--primary-dark);
   cursor: pointer;
   gap: 16px;
   transition: var(--transition);
 }
 
 .faq-question:hover {
-  color: #d4af37;
+  color: var(--primary);
 }
 
 .faq-icon {
-  color: #d4af37;
+  color: var(--primary);
   flex-shrink: 0;
   transition: transform 0.3s ease;
   width: 28px;
@@ -1496,7 +1732,7 @@ input, textarea, select {
 
 .faq-item.open .faq-icon {
   transform: rotate(180deg);
-  color: #d4af37;
+  color: var(--primary);
 }
 
 .faq-answer {
@@ -1513,7 +1749,7 @@ input, textarea, select {
 
 .faq-answer p {
   font-size: 0.92rem;
-  color: #b0b0b0;
+  color: #4a5568;
   line-height: 1.8;
 }
 
@@ -3681,8 +3917,9 @@ body {
 
 .features-strip,
 .services,
-.about,
+.about:not(.about-bg-section),
 .pricing,
+.faq,
 .faq-section,
 .testimonials,
 .team-section,
@@ -3934,7 +4171,20 @@ span.flatpickr-weekday,
 
 /* ===== OVER ONS STYLE TEAM CARD ===== */
 .team-overons-style {
-  background: #ffffff !important;
+  background: linear-gradient(160deg, #eaf6fa 0%, #f4f8fa 50%, #dff3f7 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-overons-style::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(30,136,168,0.10) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .team-overons-style .section-header {
@@ -3955,7 +4205,7 @@ span.flatpickr-weekday,
 
 .team-overons-style .team-card {
   display: grid;
-  grid-template-columns: minmax(320px, 520px) minmax(320px, 1fr);
+  grid-template-columns: minmax(300px, 460px) minmax(300px, 1fr);
   align-items: center;
   gap: 70px;
   max-width: none;
@@ -3975,11 +4225,12 @@ span.flatpickr-weekday,
 
 .team-overons-style .team-card-photo-wrap {
   height: auto;
-  aspect-ratio: 520 / 620;
-  border-radius: 24px;
-  background: #f4f8fa;
-  box-shadow: 0 18px 44px rgba(15,76,92,0.1);
+  aspect-ratio: 460 / 560;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #c8e8f2, #dff3f7);
+  box-shadow: 0 24px 60px rgba(15,76,92,0.16), 0 0 0 6px rgba(30,136,168,0.10);
   overflow: hidden;
+  position: relative;
 }
 
 .team-overons-style .team-card-photo {
@@ -3992,13 +4243,14 @@ span.flatpickr-weekday,
 .team-overons-style .team-card-badge {
   left: 22px;
   bottom: 22px;
-  padding: 8px 14px;
-  background: rgba(38,50,56,0.92) !important;
-  border: 1px solid rgba(43,179,163,0.55) !important;
+  padding: 8px 16px;
+  background: rgba(15,76,92,0.90) !important;
+  border: 1px solid rgba(43,179,163,0.60) !important;
   border-radius: 999px;
   color: #2bb3a3 !important;
   font-weight: 800;
-  box-shadow: 0 10px 24px rgba(15,76,92,0.22);
+  box-shadow: 0 8px 20px rgba(15,76,92,0.25);
+  backdrop-filter: blur(4px);
 }
 
 .team-overons-style .team-card-badge svg {
@@ -4011,34 +4263,36 @@ span.flatpickr-weekday,
 
 .team-overons-style .team-card-name {
   margin-bottom: 12px;
-  color: #263238 !important;
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: #0f4c5c !important;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
   font-weight: 900;
-  line-height: 1.12;
+  line-height: 1.1;
 }
 
 .team-overons-style .team-card-role {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
-  margin-bottom: 26px;
-  padding: 7px 16px;
-  color: #2bb3a3 !important;
-  background: rgba(43,179,163,0.12) !important;
-  border: 1px solid rgba(43,179,163,0.35) !important;
+  margin-bottom: 24px;
+  padding: 7px 18px;
+  color: #1e88a8 !important;
+  background: rgba(30,136,168,0.10) !important;
+  border: 1.5px solid rgba(30,136,168,0.30) !important;
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 900;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
 }
 
 .team-overons-style .team-card-desc {
-  max-width: 560px;
-  margin-bottom: 32px;
-  color: #607d86 !important;
-  font-size: 1rem;
-  line-height: 1.9;
+  max-width: 520px;
+  margin-bottom: 28px;
+  color: #455a64 !important;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  border-left: 3px solid #1e88a8;
+  padding-left: 16px;
 }
 
 .team-overons-style .team-card-actions {
@@ -4049,7 +4303,7 @@ span.flatpickr-weekday,
 
 .team-overons-style .team-card-actions .btn {
   flex: 0 1 auto;
-  min-width: 180px;
+  min-width: 170px;
   justify-content: center;
   border-radius: 12px;
 }
@@ -4125,9 +4379,10 @@ body {
 
 .features-strip,
 .services,
-.about,
+.about:not(.about-bg-section),
 .pricing,
 .testimonials,
+.faq,
 .faq-section,
 .contact-section,
 .booking-section,
@@ -4187,6 +4442,11 @@ body {
 .footer-contact h3,
 .stat-number {
   color: #263238 !important;
+}
+
+.about-bg-section .about-content-overlay .section-title,
+.about-bg-section .about-content-overlay h2 {
+  color: #4dd9f0 !important;
 }
 
 .section-desc,

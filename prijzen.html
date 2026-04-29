@@ -173,13 +173,82 @@
             </div>
             <ul class="pricing-features" aria-label="Kenmerken overige diensten">
               <li><i class="fas fa-check" aria-hidden="true"></i> Eindschoonmaak bij verhuizing</li>
-              <li><i class="fas fa-check" aria-hidden="true"></i> Airbnb & verhuurschoonmaak</li>
               <li><i class="fas fa-check" aria-hidden="true"></i> Dieptereiniging</li>
               <li><i class="fas fa-check" aria-hidden="true"></i> Zakelijke contracten</li>
               <li><i class="fas fa-check" aria-hidden="true"></i> Horeca & winkels</li>
               <li><i class="fas fa-check" aria-hidden="true"></i> Prijs op maat</li>
             </ul>
             <a href="contact.html" class="btn btn-outline" aria-label="Vraag offerte aan">Offerte Aanvragen</a>
+          </article>
+
+          <!-- CONTRACT CARD -->
+          <article class="pricing-card contract-card" itemscope itemtype="https://schema.org/Offer">
+            <div class="pricing-badge contract-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+              Vaste Overeenkomst
+            </div>
+            <div class="pricing-header">
+              <h3 itemprop="name">Schoonmaakcontract</h3>
+              <div class="pricing-price">
+                <span class="price" itemprop="price">Op</span>
+                <span class="currency" itemprop="priceCurrency"></span>
+                <span class="period">maat</span>
+              </div>
+              <p>Vaste afspraken, vast team, zonder zorgen</p>
+            </div>
+
+            <ul class="pricing-features" aria-label="Wat is inbegrepen in het contract">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Vast toegewezen schoonmaakteam</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Vaste schoonmaakmomenten per week</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Kwaliteitscontrole na elke beurt</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Materialen & middelen inbegrepen</li>
+            </ul>
+
+            <!-- Toggle knop -->
+            <button class="contract-toggle-btn" aria-expanded="false" aria-controls="contract-details">
+              <span class="contract-toggle-text">Bekijk voorwaarden & opzegging</span>
+              <svg class="contract-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+
+            <!-- Uitklapbare details -->
+            <div class="contract-details" id="contract-details" aria-hidden="true">
+              <div class="contract-section-block">
+                <h4 class="contract-block-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Contractvoorwaarden
+                </h4>
+                <ul class="contract-terms-list">
+                  <li>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <span><strong>Minimumduur:</strong> 3 maanden</span>
+                  </li>
+                  <li>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <span><strong>Verlenging:</strong> Automatisch per maand na minimumduur</span>
+                  </li>
+                  <li>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <span><strong>Betaling:</strong> Maandelijks achteraf via factuur</span>
+                  </li>
+                  <li>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <span><strong>Prijs:</strong> Vastgelegd in het contract, geen verrassingen</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contract-section-block contract-cancel-block">
+                <h4 class="contract-block-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  Opzegging
+                </h4>
+                <p class="contract-cancel-text">
+                  U kunt het contract op <strong>elk gewenst moment</strong> opzeggen met een opzegtermijn van <strong>1 maand</strong>. Geen boetes, geen vragen — wij respecteren uw keuze.
+                </p>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary" aria-label="Vraag een schoonmaakcontract aan">Contract Aanvragen</a>
           </article>
 
         </div>
@@ -230,7 +299,6 @@
             <ul role="list">
               <li><a href="diensten.html">Kantoorschoonmaak</a></li>
               <li><a href="diensten.html">Eindschoonmaak</a></li>
-              <li><a href="diensten.html">Airbnb schoonmaak</a></li>
               <li><a href="diensten.html">Dieptereiniging</a></li>
               <li><a href="diensten.html">Zakelijk contract</a></li>
             </ul>
@@ -297,6 +365,21 @@
 
   <!-- JavaScript -->
   <script src="js/script.js" defer></script>
+
+  <script>
+    document.querySelector('.contract-toggle-btn').addEventListener('click', function() {
+      const details = document.getElementById('contract-details');
+      const isOpen = details.classList.contains('open');
+
+      details.classList.toggle('open');
+      this.setAttribute('aria-expanded', !isOpen);
+      details.setAttribute('aria-hidden', isOpen);
+
+      this.querySelector('.contract-toggle-text').textContent = isOpen
+        ? 'Bekijk voorwaarden & opzegging'
+        : 'Verberg voorwaarden & opzegging';
+    });
+  </script>
 
 </body>
 </html>
