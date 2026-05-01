@@ -4,31 +4,354 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
   <title>Werken bij ons | Stage Schoonmaak & Marketing | Top Aflevering</title>
-  <meta name="description" content="Wil je werken of stage lopen bij Top Aflevering? Wij zoeken gemotiveerde mensen voor schoonmaak, marketing, social media en klantencontact in Amersfoort." />
-  <meta name="keywords" content="werken bij top aflevering, stage schoonmaak amersfoort, stage marketing schoonmaakbedrijf, bijbaan schoonmaak amersfoort" />
-  <meta name="author" content="Top Aflevering" />
+  <meta name="description" content="Wil je werken of stage lopen bij Top Aflevering? Wij zoeken gemotiveerde mensen voor schoonmaak, marketing en klantencontact in Amersfoort." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://topaflevering.nl/werken-bij-ons.html" />
-
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://topaflevering.nl/werken-bij-ons.html" />
   <meta property="og:title" content="Werken bij ons | Top Aflevering" />
   <meta property="og:description" content="Stage of werk in schoonmaak, marketing of klantencontact bij Top Aflevering in Amersfoort." />
-  <meta property="og:image" content="https://topaflevering.nl/images/og-image.jpg" />
   <meta property="og:locale" content="nl_NL" />
   <meta property="og:site_name" content="Top Aflevering" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/style.css" />
-
   <style>
-    body, * { font-family: 'Montserrat', sans-serif !important; direction: ltr; text-align: left; font-feature-settings: "locl" 0; }
-    * { font-variant-numeric: normal; }
+    body, * { font-family: 'Montserrat', sans-serif !important; direction: ltr; text-align: left; }
+
+    /* ── HERO ── */
+    .wbo-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 70px;
+      background: linear-gradient(135deg, #0a2a35 0%, #0f4c5c 50%, #1e88a8 100%);
+    }
+    .wbo-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 78% 18%, rgba(43,179,163,0.28) 0%, transparent 50%),
+        radial-gradient(ellipse at 10% 85%, rgba(30,136,168,0.18) 0%, transparent 45%);
+      pointer-events: none;
+    }
+    .wbo-hero .container { position: relative; z-index: 2; }
+    .wbo-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+    .wbo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(43,179,163,0.18);
+      border: 1px solid rgba(43,179,163,0.4);
+      color: #5ee8d8;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 18px;
+    }
+    .wbo-h1 {
+      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .wbo-h1 em { font-style: normal; color: #2bb3a3; }
+    .wbo-desc {
+      font-size: 0.98rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 30px;
+    }
+    .wbo-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+    .wbo-btn-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: #2bb3a3; color: #fff; font-weight: 700; font-size: 0.93rem;
+      padding: 13px 26px; border-radius: 11px; text-decoration: none; transition: all .25s;
+    }
+    .wbo-btn-primary:hover { background: #22a095; transform: translateY(-2px); box-shadow: 0 10px 24px rgba(43,179,163,.35); }
+    .wbo-btn-outline {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: transparent; color: #fff; font-weight: 600; font-size: 0.93rem;
+      padding: 12px 24px; border-radius: 11px; border: 2px solid rgba(255,255,255,.38); text-decoration: none; transition: all .25s;
+    }
+    .wbo-btn-outline:hover { border-color: rgba(255,255,255,.85); background: rgba(255,255,255,.1); }
+    .wbo-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .wbo-stat {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      padding: 18px 26px;
+      text-align: center;
+      min-width: 120px;
+    }
+    .wbo-stat strong { display: block; font-size: 1.9rem; font-weight: 900; color: #2bb3a3; line-height: 1; }
+    .wbo-stat span { font-size: 0.75rem; color: rgba(255,255,255,.68); font-weight: 500; }
+    .wbo-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 36px; font-size: 0.82rem; color: rgba(255,255,255,.5);
+    }
+    .wbo-breadcrumb a { color: rgba(255,255,255,.62); text-decoration: none; transition: color .2s; }
+    .wbo-breadcrumb a:hover { color: #2bb3a3; }
+    .wbo-breadcrumb-cur { color: #2bb3a3; font-weight: 600; }
+
+    /* ── JOBS ── */
+    .wbo-jobs {
+      padding: 72px 0 64px;
+      background: #f4f8fa;
+    }
+    .wbo-section-head {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .wbo-tag {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(30,136,168,0.1); color: #1e88a8;
+      font-size: 0.73rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 13px; border-radius: 100px; margin-bottom: 14px;
+    }
+    .wbo-section-title {
+      font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+      font-weight: 800; color: #0f2027; line-height: 1.2; margin-bottom: 10px;
+    }
+    .wbo-section-title em { font-style: normal; color: #1e88a8; }
+    .wbo-section-desc { font-size: 0.94rem; color: #607d86; line-height: 1.72; }
+    .wbo-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .wbo-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 30px 26px;
+      box-shadow: 0 4px 20px rgba(15,76,92,.07);
+      border: 1px solid #e8f2f5;
+      position: relative;
+      overflow: hidden;
+      transition: transform .28s, box-shadow .28s;
+    }
+    .wbo-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #1e88a8, #2bb3a3);
+    }
+    .wbo-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(15,76,92,.13); }
+    .wbo-card-badge {
+      display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: #2bb3a3; background: rgba(43,179,163,.1);
+      padding: 3px 10px; border-radius: 100px; margin-bottom: 12px;
+    }
+    .wbo-card-icon {
+      width: 54px; height: 54px;
+      background: linear-gradient(135deg, rgba(30,136,168,.1), rgba(43,179,163,.1));
+      border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.55rem; color: #1e88a8; margin-bottom: 16px;
+    }
+    .wbo-card h3 { font-size: 1.05rem; font-weight: 800; color: #0f2027; margin-bottom: 8px; }
+    .wbo-card > p { color: #607d86; font-size: 0.87rem; line-height: 1.68; margin-bottom: 16px; }
+    .wbo-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+    .wbo-card ul li {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 0.85rem; color: #455a64; line-height: 1.45;
+    }
+    .wbo-card ul li::before {
+      content: ''; width: 6px; height: 6px; background: #2bb3a3;
+      border-radius: 50%; flex-shrink: 0; margin-top: 6px;
+    }
+
+    /* ── FORM ── */
+    .wbo-form-section {
+      padding: 72px 0 90px;
+      background: linear-gradient(160deg, #f0f7fa 0%, #e5f0f5 100%);
+    }
+    .wbo-form-layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+    .wbo-form-sidebar { position: sticky; top: 96px; }
+    .wbo-sidebar-title { font-size: 1.25rem; font-weight: 800; color: #0f2027; margin-bottom: 8px; }
+    .wbo-sidebar-desc { font-size: 0.88rem; color: #607d86; line-height: 1.72; margin-bottom: 26px; }
+    .wbo-steps { display: flex; flex-direction: column; gap: 0; }
+    .wbo-step {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding-bottom: 24px; position: relative;
+    }
+    .wbo-step:not(:last-child)::after {
+      content: ''; position: absolute; left: 17px; top: 36px;
+      width: 2px; height: calc(100% - 36px);
+      background: linear-gradient(to bottom, #1e88a8, rgba(43,179,163,.2));
+    }
+    .wbo-step-num {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: linear-gradient(135deg, #1e88a8, #2bb3a3);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 0.82rem; font-weight: 800; color: #fff;
+    }
+    .wbo-step-text strong { display: block; font-size: 0.88rem; font-weight: 700; color: #0f2027; margin-bottom: 3px; }
+    .wbo-step-text span { font-size: 0.8rem; color: #607d86; line-height: 1.5; }
+    .wbo-alt-contact {
+      background: #fff; border-radius: 14px; padding: 20px;
+      border: 1px solid #d8e8ec; margin-top: 8px;
+    }
+    .wbo-alt-contact p { font-size: 0.8rem; color: #607d86; margin-bottom: 10px; }
+    .wbo-alt-contact a {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600; color: #1e88a8;
+      text-decoration: none; margin-bottom: 7px; transition: color .2s;
+    }
+    .wbo-alt-contact a:hover { color: #2bb3a3; }
+    .wbo-alt-contact .ms { font-size: 17px; }
+
+    /* Form card */
+    .wbo-form-card {
+      background: #fff; border-radius: 22px;
+      padding: 38px 36px;
+      box-shadow: 0 10px 36px rgba(15,76,92,.1);
+      border: 1px solid #deeef3;
+    }
+    .wbo-form-head {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 28px; padding-bottom: 24px;
+      border-bottom: 2px solid #f0f6f8;
+    }
+    .wbo-form-ico {
+      width: 54px; height: 54px; flex-shrink: 0;
+      background: linear-gradient(135deg, #1e88a8, #2bb3a3);
+      border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.5rem;
+    }
+    .wbo-form-head h3 { font-size: 1.15rem; font-weight: 800; color: #0f2027; margin-bottom: 3px; }
+    .wbo-form-head p { font-size: 0.84rem; color: #607d86; }
+    .wbo-field-group-label {
+      font-size: 0.7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      color: #1e88a8; margin: 24px 0 14px;
+      padding-bottom: 7px; border-bottom: 1px solid #e8f2f5;
+    }
+    .wbo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .wbo-fg { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .wbo-fg label { font-size: 0.82rem; font-weight: 700; color: #37474f; }
+    .wbo-fg label .req { color: #e53e3e; margin-left: 2px; }
+    .wbo-fg input, .wbo-fg select, .wbo-fg textarea {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid #cfe0e7; border-radius: 9px;
+      font-size: 0.9rem; color: #263238; background: #f8fbfc;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+      outline: none; direction: ltr !important;
+    }
+    .wbo-fg input:focus, .wbo-fg select:focus, .wbo-fg textarea:focus {
+      border-color: #1e88a8; box-shadow: 0 0 0 3px rgba(30,136,168,.11); background: #fff;
+    }
+    .wbo-fg input.err, .wbo-fg textarea.err { border-color: #e53e3e; box-shadow: 0 0 0 3px rgba(229,62,62,.1); }
+    .wbo-fg textarea { resize: vertical; min-height: 110px; }
+    .wbo-fg select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%231e88a8'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 12px center; padding-right: 38px; cursor: pointer;
+    }
+
+    /* Position radio cards */
+    .wbo-pos-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 16px;
+    }
+    .wbo-pos-card { position: relative; }
+    .wbo-pos-card input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .wbo-pos-card label {
+      display: flex; flex-direction: column; align-items: center; gap: 7px;
+      padding: 14px 10px; border: 2px solid #cfe0e7; border-radius: 12px;
+      cursor: pointer; transition: all .2s; text-align: center;
+      background: #f8fbfc; font-weight: 600; font-size: 0.78rem; color: #546e7a; line-height: 1.3;
+    }
+    .wbo-pos-card label .ms { font-size: 1.5rem; color: #90a4ae; transition: color .2s; }
+    .wbo-pos-card input:checked + label { border-color: #1e88a8; background: rgba(30,136,168,.07); color: #0f4c5c; }
+    .wbo-pos-card input:checked + label .ms { color: #1e88a8; }
+    .wbo-pos-card label:hover { border-color: #1e88a8; background: rgba(30,136,168,.04); }
+
+    /* Availability chips */
+    .wbo-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .wbo-chip { position: relative; }
+    .wbo-chip input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .wbo-chip label {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 7px 14px; border: 1.5px solid #cfe0e7; border-radius: 100px;
+      font-size: 0.8rem; font-weight: 600; color: #546e7a; cursor: pointer; transition: all .18s; background: #f8fbfc;
+    }
+    .wbo-chip input:checked + label { border-color: #1e88a8; background: rgba(30,136,168,.1); color: #1e88a8; }
+    .wbo-chip label:hover { border-color: #1e88a8; }
+
+    /* Privacy */
+    .wbo-privacy {
+      display: flex; align-items: flex-start; gap: 11px;
+      padding: 14px; background: #f4f8fa; border-radius: 11px;
+      border: 1px solid #deeef3; margin-bottom: 22px; cursor: pointer;
+    }
+    .wbo-privacy input { width: 17px; height: 17px; accent-color: #1e88a8; flex-shrink: 0; margin-top: 2px; cursor: pointer; }
+    .wbo-privacy span { font-size: 0.8rem; color: #546e7a; line-height: 1.6; }
+    .wbo-privacy a { color: #1e88a8; text-decoration: underline; }
+
+    /* Submit */
+    .wbo-submit {
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 11px;
+      background: linear-gradient(135deg, #1e88a8, #2bb3a3); color: #fff;
+      font-size: 0.97rem; font-weight: 700; padding: 16px 28px; border-radius: 11px;
+      border: none; cursor: pointer; transition: all .25s; box-shadow: 0 6px 18px rgba(30,136,168,.28);
+    }
+    .wbo-submit:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(30,136,168,.38); }
+    .wbo-submit:disabled { opacity: .72; cursor: not-allowed; }
+    .wbo-reassurance {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .wbo-reassurance span { display: flex; align-items: center; gap: 5px; font-size: 0.77rem; color: #90a4ae; font-weight: 600; }
+    .wbo-reassurance .ms { font-size: 15px; color: #2bb3a3; }
+
+    /* Success */
+    .wbo-success { text-align: center; padding: 52px 32px; display: none; }
+    .wbo-success-ico {
+      width: 84px; height: 84px; background: rgba(43,179,163,.12); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+    }
+    .wbo-success h3 { font-size: 1.4rem; font-weight: 800; color: #2bb3a3; margin-bottom: 10px; }
+    .wbo-success p { font-size: 0.92rem; color: #607d86; line-height: 1.75; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .wbo-hero-inner { grid-template-columns: 1fr; }
+      .wbo-stats { flex-direction: row; flex-wrap: wrap; }
+      .wbo-stat { flex: 1; min-width: 110px; }
+      .wbo-form-layout { grid-template-columns: 1fr; }
+      .wbo-form-sidebar { position: static; }
+    }
+    @media (max-width: 768px) {
+      .wbo-hero { padding: 76px 0 52px; }
+      .wbo-cards { grid-template-columns: 1fr; }
+      .wbo-pos-grid { grid-template-columns: 1fr 1fr; }
+      .wbo-row { grid-template-columns: 1fr; }
+      .wbo-form-card { padding: 24px 18px; }
+      .wbo-jobs, .wbo-form-section { padding: 56px 0; }
+    }
+    @media (max-width: 480px) {
+      .wbo-pos-grid { grid-template-columns: 1fr 1fr; }
+      .wbo-btns { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
@@ -40,7 +363,6 @@
         <a href="index.html" class="logo" aria-label="Top Aflevering - Terug naar home">
           <img src="images/logo_new.svg" alt="Top Aflevering logo" style="height:48px;width:auto;display:block;" />
         </a>
-
         <ul class="nav-links" role="list">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="diensten.html" class="nav-link">Diensten</a></li>
@@ -50,17 +372,14 @@
           <li><a href="faq.html" class="nav-link">FAQ</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-
         <a href="tel:+31613288023" class="btn btn-primary nav-cta" aria-label="Bel ons nu">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Bel Nu
         </a>
-
         <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
-
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobiel menu" aria-hidden="true">
       <ul role="list">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -75,125 +394,303 @@
   </header>
 
   <main id="main-content">
-    <section class="page-hero careers-hero" aria-label="Werken bij ons">
+
+    <!-- ═══ 1. HERO ═══ -->
+    <section class="wbo-hero" aria-label="Werken bij Top Aflevering">
       <div class="container">
-        <span class="page-hero-tag">Werken bij ons</span>
-        <h1 class="page-hero-title">Groei mee met <span class="highlight">Top Aflevering</span></h1>
-        <p class="page-hero-desc">Wij zoeken gemotiveerde mensen voor schoonmaak, stage, marketing en ondersteuning in Amersfoort en omgeving.</p>
-        <nav class="page-breadcrumb" aria-label="Broodkruimelnavigatie">
+        <div class="wbo-hero-inner">
+          <div>
+            <div class="wbo-badge">
+              <span class="ms" aria-hidden="true">work</span>
+              Nu beschikbaar
+            </div>
+            <h1 class="wbo-h1">Groei mee met<br><em>Top Aflevering</em></h1>
+            <p class="wbo-desc">Wij zoeken gemotiveerde mensen voor schoonmaak, stage, marketing en klantenondersteuning in Amersfoort. Motivatie telt meer dan een perfect cv.</p>
+            <div class="wbo-btns">
+              <a href="#sollicitatie" class="wbo-btn-primary">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                Direct solliciteren
+              </a>
+              <a href="https://wa.me/31613288023?text=Hallo%2C%20ik%20heb%20interesse%20in%20werken%20of%20stage%20bij%20Top%20Aflevering." class="wbo-btn-outline" target="_blank" rel="noopener noreferrer">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp ons
+              </a>
+            </div>
+          </div>
+          <div class="wbo-stats" aria-label="Cijfers">
+            <div class="wbo-stat">
+              <strong>3+</strong>
+              <span>Functies open</span>
+            </div>
+            <div class="wbo-stat">
+              <strong>4.8</strong>
+              <span>Google rating</span>
+            </div>
+            <div class="wbo-stat">
+              <strong>24u</strong>
+              <span>Reactietijd</span>
+            </div>
+          </div>
+        </div>
+        <nav class="wbo-breadcrumb" aria-label="Broodkruimelnavigatie">
           <a href="index.html">Home</a>
-          <span class="page-breadcrumb-sep" aria-hidden="true">&gt;</span>
-          <span class="page-breadcrumb-current">Werken bij ons</span>
+          <span aria-hidden="true">›</span>
+          <span class="wbo-breadcrumb-cur">Werken bij ons</span>
         </nav>
       </div>
     </section>
 
-    <section class="careers-intro section-padding" aria-labelledby="careers-title">
+    <!-- ═══ 2. FUNCTIES ═══ -->
+    <section class="wbo-jobs" aria-labelledby="wbo-jobs-title">
       <div class="container">
-        <div class="careers-layout">
-          <div class="careers-copy">
-            <span class="section-tag">Wat zoeken wij?</span>
-            <h2 id="careers-title" class="section-title">Mensen die netjes werken, willen leren en betrouwbaar zijn</h2>
-            <p>
-              Top Aflevering groeit. Daarom staan wij open voor mensen die willen meewerken in de schoonmaak,
-              stage willen lopen of willen helpen met marketing en online zichtbaarheid.
-            </p>
-            <p>
-              Ervaring is mooi meegenomen, maar motivatie, afspraken nakomen en respectvol omgaan met klanten vinden wij het belangrijkst.
-            </p>
-            <div class="careers-actions">
-              <a href="mailto:info@topaflevering.nl?subject=Sollicitatie%20of%20stage%20bij%20Top%20Aflevering" class="btn btn-primary">Mail uw interesse</a>
-              <a href="https://wa.me/31613288023?text=Hallo%2C%20ik%20heb%20interesse%20in%20werken%20of%20stage%20bij%20Top%20Aflevering." class="btn btn-outline" target="_blank" rel="noopener noreferrer">WhatsApp ons</a>
-            </div>
+        <div class="wbo-section-head">
+          <div class="wbo-tag">
+            <span class="ms" aria-hidden="true">work_history</span>
+            Openstaande functies
           </div>
-
-          <div class="careers-note">
-            <span class="ms" aria-hidden="true">work</span>
-            <h3>Open sollicitaties welkom</h3>
-            <p>Stuur kort wie u bent, wat u zoekt en wanneer u beschikbaar bent. Wij nemen persoonlijk contact met u op.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="careers-opportunities section-padding" aria-labelledby="opportunities-title">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Mogelijkheden</span>
-          <h2 id="opportunities-title" class="section-title">Waar kunt u bij ons starten?</h2>
-          <p class="section-desc">We kijken samen welke rol past bij uw school, ervaring, planning en interesses.</p>
+          <h2 id="wbo-jobs-title" class="wbo-section-title">Waar kunt u bij ons <em>starten?</em></h2>
+          <p class="wbo-section-desc">We kijken samen welke rol past bij uw opleiding, ervaring en planning.</p>
         </div>
 
-        <div class="careers-card-grid">
-          <article class="career-card">
-            <span class="career-card-icon ms" aria-hidden="true">cleaning_services</span>
+        <div class="wbo-cards">
+          <article class="wbo-card">
+            <div class="wbo-card-badge">Stage</div>
+            <div class="wbo-card-icon"><span class="ms" aria-hidden="true">cleaning_services</span></div>
             <h3>Stage schoonmaak</h3>
-            <p>Voor studenten die praktijkervaring willen opdoen in professioneel schoonmaakwerk.</p>
+            <p>Praktijkervaring in professioneel schoonmaakwerk bij kantoren en woningen.</p>
             <ul>
               <li>Meelopen met ervaren medewerkers</li>
-              <li>Leren werken volgens planning en kwaliteit</li>
-              <li>Ervaring met kantoren, bedrijven en opleveringen</li>
+              <li>Werken volgens planning en kwaliteit</li>
+              <li>Kantoren, bedrijven en opleveringen</li>
             </ul>
           </article>
 
-          <article class="career-card">
-            <span class="career-card-icon ms" aria-hidden="true">campaign</span>
+          <article class="wbo-card">
+            <div class="wbo-card-badge">Stage</div>
+            <div class="wbo-card-icon"><span class="ms" aria-hidden="true">campaign</span></div>
             <h3>Stage marketing</h3>
-            <p>Voor studenten die willen helpen met zichtbaarheid, social media en klantcommunicatie.</p>
+            <p>Helpen met zichtbaarheid, social media en klantcommunicatie.</p>
             <ul>
-              <li>Content maken voor Instagram en Facebook</li>
-              <li>Meedenken over acties en online uitstraling</li>
-              <li>Foto's, teksten en simpele campagnes voorbereiden</li>
+              <li>Content voor Instagram en Facebook</li>
+              <li>Meedenken over online uitstraling</li>
+              <li>Foto's, teksten en campagnes</li>
             </ul>
           </article>
 
-          <article class="career-card">
-            <span class="career-card-icon ms" aria-hidden="true">support_agent</span>
-            <h3>Klantencontact ondersteuning</h3>
-            <p>Voor iemand die netjes communiceert en wil leren hoe aanvragen en offertes worden opgevolgd.</p>
+          <article class="wbo-card">
+            <div class="wbo-card-badge">Werk</div>
+            <div class="wbo-card-icon"><span class="ms" aria-hidden="true">support_agent</span></div>
+            <h3>Klantencontact</h3>
+            <p>Netjes communiceren en aanvragen en offertes opvolgen.</p>
             <ul>
               <li>Berichten en aanvragen opvolgen</li>
               <li>Afspraken en informatie voorbereiden</li>
-              <li>Ondersteunen bij offertes en planning</li>
+              <li>Ondersteuning bij offertes</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="careers-profile section-padding" aria-labelledby="profile-title">
+    <!-- ═══ 3. SOLLICITATIEFORMULIER ═══ -->
+    <section id="sollicitatie" class="wbo-form-section" aria-labelledby="wbo-form-title">
       <div class="container">
-        <div class="careers-profile-box">
-          <div>
-            <span class="section-tag">Profiel</span>
-            <h2 id="profile-title" class="section-title">Past dit bij u?</h2>
-            <p class="section-desc">Wij zoeken mensen die rustig, netjes en klantvriendelijk werken. U hoeft niet alles al te kunnen, maar u moet wel willen leren.</p>
+        <div class="wbo-section-head" style="margin-bottom: 44px;">
+          <div class="wbo-tag">
+            <span class="ms" aria-hidden="true">edit_document</span>
+            Solliciteer
           </div>
-          <ul class="careers-check-list" role="list">
-            <li><span class="ms" aria-hidden="true">check_circle</span> U komt afspraken na</li>
-            <li><span class="ms" aria-hidden="true">check_circle</span> U werkt netjes en zorgvuldig</li>
-            <li><span class="ms" aria-hidden="true">check_circle</span> U communiceert vriendelijk</li>
-            <li><span class="ms" aria-hidden="true">check_circle</span> U bent beschikbaar in of rond Amersfoort</li>
-            <li><span class="ms" aria-hidden="true">check_circle</span> U wilt leren en groeien</li>
-          </ul>
+          <h2 id="wbo-form-title" class="wbo-section-title">Sollicitatieformulier</h2>
+          <p class="wbo-section-desc">Vul het formulier in — wij reageren persoonlijk binnen 24 uur.</p>
+        </div>
+
+        <div class="wbo-form-layout">
+
+          <!-- Sidebar stappen -->
+          <aside class="wbo-form-sidebar">
+            <h3 class="wbo-sidebar-title">Hoe werkt het?</h3>
+            <p class="wbo-sidebar-desc">Solliciteren gaat eenvoudig en persoonlijk in 4 stappen.</p>
+            <div class="wbo-steps">
+              <div class="wbo-step">
+                <div class="wbo-step-num" aria-hidden="true">1</div>
+                <div class="wbo-step-text">
+                  <strong>Formulier invullen</strong>
+                  <span>Vertel ons wie u bent en welke positie u interesseert.</span>
+                </div>
+              </div>
+              <div class="wbo-step">
+                <div class="wbo-step-num" aria-hidden="true">2</div>
+                <div class="wbo-step-text">
+                  <strong>Persoonlijk contact</strong>
+                  <span>Wij bellen of mailen binnen 24 uur voor kennismaking.</span>
+                </div>
+              </div>
+              <div class="wbo-step">
+                <div class="wbo-step-num" aria-hidden="true">3</div>
+                <div class="wbo-step-text">
+                  <strong>Kennismakingsgesprek</strong>
+                  <span>We bespreken uw wensen, beschikbaarheid en mogelijkheden.</span>
+                </div>
+              </div>
+              <div class="wbo-step">
+                <div class="wbo-step-num" aria-hidden="true">4</div>
+                <div class="wbo-step-text">
+                  <strong>Welkom aan boord</strong>
+                  <span>U start met begeleiding en groeit mee in het team.</span>
+                </div>
+              </div>
+            </div>
+            <div class="wbo-alt-contact">
+              <p>Liever direct contact?</p>
+              <a href="tel:+31613288023"><span class="ms" aria-hidden="true">call</span> 06 13 28 80 23</a>
+              <a href="mailto:info@topaflevering.nl?subject=Sollicitatie"><span class="ms" aria-hidden="true">mail</span> info@topaflevering.nl</a>
+              <a href="https://wa.me/31613288023?text=Hallo%2C%20ik%20wil%20graag%20solliciteren%20bij%20Top%20Aflevering." target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp ons
+              </a>
+            </div>
+          </aside>
+
+          <!-- Form -->
+          <div class="wbo-form-card">
+            <div id="wbo-success" class="wbo-success" role="alert" aria-live="assertive">
+              <div class="wbo-success-ico">
+                <svg width="46" height="46" viewBox="0 0 24 24" fill="#2bb3a3"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <h3>Sollicitatie ontvangen!</h3>
+              <p>Bedankt voor uw sollicitatie bij Top Aflevering.<br>U ontvangt een bevestiging per e-mail.<br><strong style="color:#2bb3a3;">Wij nemen binnen 24 uur contact met u op.</strong></p>
+            </div>
+
+            <form id="wboForm" action="https://api.web3forms.com/submit" method="POST" novalidate aria-label="Sollicitatieformulier">
+              <input type="hidden" name="access_key" value="9b306565-145c-42b4-abbf-cf50a20816c8" />
+
+              <div class="wbo-form-head">
+                <div class="wbo-form-ico" aria-hidden="true"><span class="ms">edit_document</span></div>
+                <div>
+                  <h3>Sollicitatieformulier</h3>
+                  <p>Vul uw gegevens in. Wij nemen persoonlijk contact op.</p>
+                </div>
+              </div>
+
+              <!-- Persoonsgegevens -->
+              <div class="wbo-field-group-label" aria-hidden="true">Persoonlijke gegevens</div>
+              <div class="wbo-row">
+                <div class="wbo-fg">
+                  <label for="wbo-voornaam">Voornaam <span class="req">*</span></label>
+                  <input type="text" id="wbo-voornaam" name="voornaam" placeholder="Jan" required autocomplete="given-name" />
+                </div>
+                <div class="wbo-fg">
+                  <label for="wbo-achternaam">Achternaam <span class="req">*</span></label>
+                  <input type="text" id="wbo-achternaam" name="achternaam" placeholder="de Vries" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="wbo-row">
+                <div class="wbo-fg">
+                  <label for="wbo-email">E-mailadres <span class="req">*</span></label>
+                  <input type="email" id="wbo-email" name="email" placeholder="jan@email.nl" required autocomplete="email" />
+                </div>
+                <div class="wbo-fg">
+                  <label for="wbo-tel">Telefoonnummer <span class="req">*</span></label>
+                  <input type="tel" id="wbo-tel" name="telefoon" placeholder="06 12 34 56 78" required autocomplete="tel" />
+                </div>
+              </div>
+              <div class="wbo-row">
+                <div class="wbo-fg">
+                  <label for="wbo-leeftijd">Leeftijd</label>
+                  <input type="number" id="wbo-leeftijd" name="leeftijd" placeholder="21" min="15" max="65" />
+                </div>
+                <div class="wbo-fg">
+                  <label for="wbo-woonplaats">Woonplaats</label>
+                  <input type="text" id="wbo-woonplaats" name="woonplaats" placeholder="Amersfoort" autocomplete="address-level2" />
+                </div>
+              </div>
+
+              <!-- Positie -->
+              <div class="wbo-field-group-label" aria-hidden="true">Welke positie interesseert u?</div>
+              <div class="wbo-pos-grid" role="radiogroup" aria-label="Kies een positie">
+                <div class="wbo-pos-card">
+                  <input type="radio" name="positie" id="pos-s" value="Stage Schoonmaak" />
+                  <label for="pos-s"><span class="ms" aria-hidden="true">cleaning_services</span>Stage Schoonmaak</label>
+                </div>
+                <div class="wbo-pos-card">
+                  <input type="radio" name="positie" id="pos-m" value="Stage Marketing" />
+                  <label for="pos-m"><span class="ms" aria-hidden="true">campaign</span>Stage Marketing</label>
+                </div>
+                <div class="wbo-pos-card">
+                  <input type="radio" name="positie" id="pos-k" value="Klantencontact" />
+                  <label for="pos-k"><span class="ms" aria-hidden="true">support_agent</span>Klantencontact</label>
+                </div>
+                <div class="wbo-pos-card">
+                  <input type="radio" name="positie" id="pos-w" value="Schoonmaak medewerker" />
+                  <label for="pos-w"><span class="ms" aria-hidden="true">mop</span>Schoonmaak medewerker</label>
+                </div>
+                <div class="wbo-pos-card">
+                  <input type="radio" name="positie" id="pos-o" value="Open sollicitatie" />
+                  <label for="pos-o"><span class="ms" aria-hidden="true">all_inclusive</span>Open sollicitatie</label>
+                </div>
+                <div class="wbo-pos-card">
+                  <input type="radio" name="positie" id="pos-a" value="Anders" />
+                  <label for="pos-a"><span class="ms" aria-hidden="true">more_horiz</span>Anders</label>
+                </div>
+              </div>
+
+              <!-- Beschikbaarheid -->
+              <div class="wbo-field-group-label" aria-hidden="true">Beschikbaarheid</div>
+              <div class="wbo-chips" role="group" aria-label="Beschikbare dagen">
+                <div class="wbo-chip"><input type="checkbox" id="d-ma" name="beschikbaarheid" value="Maandag" /><label for="d-ma">Ma</label></div>
+                <div class="wbo-chip"><input type="checkbox" id="d-di" name="beschikbaarheid" value="Dinsdag" /><label for="d-di">Di</label></div>
+                <div class="wbo-chip"><input type="checkbox" id="d-wo" name="beschikbaarheid" value="Woensdag" /><label for="d-wo">Wo</label></div>
+                <div class="wbo-chip"><input type="checkbox" id="d-do" name="beschikbaarheid" value="Donderdag" /><label for="d-do">Do</label></div>
+                <div class="wbo-chip"><input type="checkbox" id="d-vr" name="beschikbaarheid" value="Vrijdag" /><label for="d-vr">Vr</label></div>
+                <div class="wbo-chip"><input type="checkbox" id="d-za" name="beschikbaarheid" value="Zaterdag" /><label for="d-za">Za</label></div>
+                <div class="wbo-chip"><input type="checkbox" id="d-fl" name="beschikbaarheid" value="Flexibel" /><label for="d-fl">Flexibel</label></div>
+              </div>
+              <div class="wbo-fg">
+                <label for="wbo-uren">Uren per week</label>
+                <select id="wbo-uren" name="uren_per_week">
+                  <option value="" disabled selected>Kies een optie</option>
+                  <option value="1-8 uur">1–8 uur</option>
+                  <option value="8-16 uur">8–16 uur</option>
+                  <option value="16-24 uur">16–24 uur</option>
+                  <option value="24-32 uur">24–32 uur</option>
+                  <option value="Fulltime">Fulltime</option>
+                  <option value="In overleg">In overleg</option>
+                </select>
+              </div>
+
+              <!-- Motivatie -->
+              <div class="wbo-field-group-label" aria-hidden="true">Motivatie</div>
+              <div class="wbo-fg">
+                <label for="wbo-motivatie">Vertel ons iets over uzelf <span class="req">*</span></label>
+                <textarea id="wbo-motivatie" name="motivatie" rows="4" placeholder="Waarom wilt u bij Top Aflevering werken? Wat brengt u mee?" required></textarea>
+              </div>
+              <div class="wbo-fg">
+                <label for="wbo-start">Gewenste startdatum</label>
+                <input type="text" id="wbo-start" name="startdatum" placeholder="Bijv. 1 juni 2025 of zo snel mogelijk" />
+              </div>
+
+              <!-- Privacy -->
+              <label class="wbo-privacy" for="wbo-privacy">
+                <input type="checkbox" id="wbo-privacy" name="privacy" required />
+                <span>Ik ga akkoord met het verwerken van mijn gegevens door Top Aflevering voor deze sollicitatie. Gegevens worden niet gedeeld met derden. Zie ons <a href="#" rel="nofollow">privacybeleid</a>.</span>
+              </label>
+
+              <button type="submit" class="wbo-submit" id="wbo-submit">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                <span id="wbo-submit-text">Sollicitatie versturen</span>
+              </button>
+
+              <div class="wbo-reassurance">
+                <span><span class="ms" aria-hidden="true">lock</span> Gegevens zijn veilig</span>
+                <span><span class="ms" aria-hidden="true">check_circle</span> Vertrouwelijk</span>
+                <span><span class="ms" aria-hidden="true">bolt</span> Reactie binnen 24u</span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="careers-apply" aria-labelledby="apply-title">
-      <div class="container">
-        <div class="careers-apply-box">
-          <div>
-            <h2 id="apply-title">Interesse in werken of stage?</h2>
-            <p>Stuur ons uw naam, leeftijd, woonplaats, beschikbaarheid en waar u interesse in heeft: schoonmaak, marketing of klantencontact.</p>
-          </div>
-          <div class="careers-actions">
-            <a href="mailto:info@topaflevering.nl?subject=Werken%20bij%20Top%20Aflevering" class="btn btn-primary">Stuur e-mail</a>
-            <a href="contact.html" class="btn btn-outline">Contactpagina</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer" id="main-footer" role="contentinfo" aria-label="Paginavoettekst">
@@ -210,7 +707,6 @@
               <div>BTW NL005346949B08</div>
             </div>
           </div>
-
           <nav class="footer-nav" aria-label="Snelle links">
             <h3>Snelle Links</h3>
             <ul role="list">
@@ -224,7 +720,6 @@
               <li><a href="werken-bij-ons.html" class="footer-work-link">Werken bij ons</a></li>
             </ul>
           </nav>
-
           <nav class="footer-nav" aria-label="Onze diensten">
             <h3>Onze Diensten</h3>
             <ul role="list">
@@ -234,7 +729,6 @@
               <li><a href="diensten.html">Zakelijk contract</a></li>
             </ul>
           </nav>
-
           <div class="footer-contact" aria-label="Contactgegevens">
             <h3>Contact</h3>
             <address>
@@ -249,16 +743,9 @@
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <div class="container">
-        <p>
-          &copy; <span id="currentYear"></span> Top Aflevering. Alle rechten voorbehouden. KvK 98679058
-          <span class="footer-sep" aria-hidden="true">|</span>
-          <a href="#" rel="nofollow">Privacybeleid</a>
-          <span class="footer-sep" aria-hidden="true">|</span>
-          <a href="#" rel="nofollow">Algemene Voorwaarden</a>
-        </p>
+        <p>&copy; <span id="currentYear"></span> Top Aflevering. Alle rechten voorbehouden. KvK 98679058 <span class="footer-sep" aria-hidden="true">|</span> <a href="#" rel="nofollow">Privacybeleid</a> <span class="footer-sep" aria-hidden="true">|</span> <a href="#" rel="nofollow">Algemene Voorwaarden</a></p>
       </div>
     </div>
   </footer>
@@ -275,5 +762,98 @@
   </button>
 
   <script src="js/script.js" defer></script>
+  <script>
+  (function () {
+    var form = document.getElementById('wboForm');
+    var successEl = document.getElementById('wbo-success');
+    var submitBtn = document.getElementById('wbo-submit');
+    var submitText = document.getElementById('wbo-submit-text');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ok = true;
+      form.querySelectorAll('[required]').forEach(function (f) {
+        if (f.type === 'checkbox') {
+          f.closest('.wbo-privacy').style.outline = f.checked ? '' : '2px solid #e53e3e';
+          if (!f.checked) ok = false;
+        } else {
+          if (!f.value.trim()) { f.classList.add('err'); ok = false; }
+          else f.classList.remove('err');
+        }
+      });
+      if (!ok) {
+        var first = form.querySelector('.err');
+        if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      submitBtn.disabled = true;
+      submitText.textContent = 'Versturen...';
+
+      var voornaam = document.getElementById('wbo-voornaam').value;
+      var achternaam = document.getElementById('wbo-achternaam').value;
+      var naam = voornaam + ' ' + achternaam;
+      var email = document.getElementById('wbo-email').value;
+      var telefoon = document.getElementById('wbo-tel').value;
+      var leeftijd = document.getElementById('wbo-leeftijd').value || '—';
+      var woonplaats = document.getElementById('wbo-woonplaats').value || '—';
+      var uren = document.getElementById('wbo-uren').value || '—';
+      var motivatie = document.getElementById('wbo-motivatie').value;
+      var startdatum = document.getElementById('wbo-start').value || '—';
+      var positieEl = form.querySelector('input[name="positie"]:checked');
+      var positie = positieEl ? positieEl.value : 'Niet opgegeven';
+      var dagen = [];
+      form.querySelectorAll('input[name="beschikbaarheid"]:checked').forEach(function (d) { dagen.push(d.value); });
+      var beschikbaarheid = dagen.length ? dagen.join(', ') : '—';
+
+      var fd = new FormData();
+      fd.append('access_key', '9b306565-145c-42b4-abbf-cf50a20816c8');
+      fd.append('subject', 'Nieuwe sollicitatie — ' + positie + ' — topaflevering.nl');
+      fd.append('from_name', 'Top Aflevering Website');
+      fd.append('name', naam); fd.append('email', email); fd.append('replyto', email); fd.append('cc', email);
+      fd.append('telefoon', telefoon); fd.append('leeftijd', leeftijd); fd.append('woonplaats', woonplaats);
+      fd.append('positie', positie); fd.append('beschikbaarheid', beschikbaarheid);
+      fd.append('uren_per_week', uren); fd.append('motivatie', motivatie); fd.append('startdatum', startdatum);
+
+      var bevestiging =
+        'Beste ' + voornaam + ',\n\n' +
+        'Hartelijk dank voor uw sollicitatie bij Top Aflevering!\n\n' +
+        'Wij hebben uw sollicitatie ontvangen en nemen binnen 24 uur persoonlijk contact op.\n\n' +
+        '─────────────────────────\n' +
+        'UW SOLLICITATIEGEGEVENS\n' +
+        '─────────────────────────\n' +
+        '• Naam:            ' + naam + '\n' +
+        '• Telefoon:        ' + telefoon + '\n' +
+        '• E-mail:          ' + email + '\n' +
+        '• Woonplaats:      ' + woonplaats + '\n' +
+        '• Positie:         ' + positie + '\n' +
+        '• Beschikbaarheid: ' + beschikbaarheid + '\n' +
+        '• Uren per week:   ' + uren + '\n' +
+        '• Startdatum:      ' + startdatum + '\n' +
+        '─────────────────────────\n\n' +
+        'Wij kijken ernaar uit kennis met u te maken!\n\n' +
+        'Met vriendelijke groet,\nTop Aflevering\nTel: 06 13 28 80 23\ninfo@topaflevering.nl';
+
+      var cd = new FormData();
+      cd.append('access_key', '9b306565-145c-42b4-abbf-cf50a20816c8');
+      cd.append('subject', 'Bevestiging sollicitatie — Top Aflevering');
+      cd.append('from_name', 'Top Aflevering');
+      cd.append('name', naam); cd.append('email', email); cd.append('replyto', 'info@topaflevering.nl');
+      cd.append('message', bevestiging);
+
+      function done() { form.style.display = 'none'; successEl.style.display = 'block'; }
+
+      fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
+        .then(function (r) { return r.json(); })
+        .then(function () { return fetch('https://api.web3forms.com/submit', { method: 'POST', body: cd }); })
+        .then(function () { done(); })
+        .catch(function () { done(); });
+    });
+
+    form.querySelectorAll('input, textarea').forEach(function (el) {
+      el.addEventListener('input', function () { this.classList.remove('err'); });
+    });
+  })();
+  </script>
 </body>
 </html>
